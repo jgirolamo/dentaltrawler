@@ -146,7 +146,7 @@ function Search() {
               <input
                 type="text"
                 className="main-search-input"
-                placeholder="Search by clinic name, address, or language (e.g., Spanish, Polish)..."
+                placeholder="Search by name, address, language, or service (e.g., Spanish, Orthodontics)..."
                 value={searchText}
                 onChange={(e) => setSearchText(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && performSearch()}

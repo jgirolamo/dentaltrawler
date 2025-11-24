@@ -135,16 +135,22 @@ def calculate_match_score(clinic: Dict, search_text: Optional[str],
         # Also search in languages
         languages = [l.lower() for l in clinic.get('languages', [])]
         language_match = any(text in lang for lang in languages)
+        # Also search in services
+        services = [s.lower() for s in clinic.get('services', [])]
+        service_match = any(text in svc for svc in services)
         
         if name_match:
-            score += 15
+            score += 12
             match_details.append('Name matches')
         if address_match:
-            score += 10
+            score += 8
             match_details.append('Address matches')
         if language_match:
             score += 5
             match_details.append('Language matches')
+        if service_match:
+            score += 5
+            match_details.append('Service matches')
     else:
         max_score -= 30
 
@@ -261,15 +267,17 @@ async def search_clinics(request: SearchRequest):
             if request.postcode.upper() not in postcode and request.postcode.upper() not in address:
                 continue
         
-        # Text search filter (searches name, address, and languages)
+        # Text search filter (searches name, address, languages, and services)
         if request.search_text:
             search_lower = request.search_text.lower()
             name_match = search_lower in clinic.get('name', '').lower()
             address_match = search_lower in clinic.get('address', '').lower()
             languages = [l.lower() for l in clinic.get('languages', [])]
             language_match = any(search_lower in lang for lang in languages)
+            services = [s.lower() for s in clinic.get('services', [])]
+            service_match = any(search_lower in svc for svc in services)
             
-            if not (name_match or address_match or language_match):
+            if not (name_match or address_match or language_match or service_match):
                 continue
         
         # Calculate match score
