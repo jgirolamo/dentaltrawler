@@ -417,6 +417,9 @@ async def get_languages():
     
     return sorted(list(languages))
 
-# Vercel serverless function - export app directly
-# Vercel will automatically handle FastAPI apps
+# Vercel serverless function handler
+# Mangum wraps FastAPI to work with Vercel's serverless environment
+from mangum import Mangum
+
+handler = Mangum(app)
 
