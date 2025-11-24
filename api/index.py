@@ -15,6 +15,8 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+# FastAPI app - routes are defined without /api prefix
+# Vercel automatically routes /api/* requests to this function
 app = FastAPI(title="Dental Clinic API", version="1.0.0")
 
 # CORS middleware
@@ -242,19 +244,19 @@ async def root():
     return {"message": "Dental Clinic API", "version": "1.0.0", "status": "running"}
 
 
-@app.get("/api/health")
+@app.get("/health")
 async def health():
     """Health check endpoint"""
     return {"status": "healthy", "timestamp": datetime.now().isoformat()}
 
 
-@app.get("/api/metadata")
+@app.get("/metadata")
 async def get_metadata():
     """Get metadata about data freshness"""
     return load_metadata()
 
 
-@app.get("/api/clinics")
+@app.get("/clinics")
 async def get_clinics(
     limit: Optional[int] = Query(None, description="Limit number of results"),
     offset: Optional[int] = Query(0, description="Offset for pagination")
@@ -270,7 +272,7 @@ async def get_clinics(
     return clinics
 
 
-@app.post("/api/search")
+@app.post("/search")
 async def search_clinics(request: SearchRequest):
     """Search clinics with filters and match scoring"""
     clinics = load_clinics()
@@ -352,7 +354,7 @@ async def search_clinics(request: SearchRequest):
     return results
 
 
-@app.get("/api/statistics")
+@app.get("/statistics")
 async def get_statistics():
     """Get statistics about clinics, services, and languages"""
     clinics = load_clinics()
@@ -392,7 +394,7 @@ async def get_statistics():
     }
 
 
-@app.get("/api/services")
+@app.get("/services")
 async def get_services():
     """Get all unique services"""
     clinics = load_clinics()
@@ -404,7 +406,7 @@ async def get_services():
     return sorted(list(services))
 
 
-@app.get("/api/languages")
+@app.get("/languages")
 async def get_languages():
     """Get all unique languages"""
     clinics = load_clinics()
@@ -415,8 +417,6 @@ async def get_languages():
     
     return sorted(list(languages))
 
-# Vercel serverless function handler
-def handler(request):
-    """Vercel serverless function entry point"""
-    return app(request.environ, request.start_response)
+# Vercel serverless function - export app directly
+# Vercel will automatically handle FastAPI apps
 

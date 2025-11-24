@@ -2,8 +2,9 @@
  * API client for Dental Clinic API
  */
 
+// Use relative paths in production (same domain), or env variable, or localhost for dev
 const API_BASE = import.meta.env.VITE_API_URL || 
-  (import.meta.env.PROD ? 'https://your-api-url.onrender.com' : 'http://localhost:8000');
+  (import.meta.env.PROD ? '' : 'http://localhost:8000');
 
 export const api = {
   async getClinics(limit = null, offset = 0) {
