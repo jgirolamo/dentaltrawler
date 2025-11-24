@@ -39,6 +39,14 @@ env/
 
 # Data files
 *.json
+!package.json
+!package-lock.json
+!**/package.json
+!**/package-lock.json
+!vercel.json
+!**/vercel.json
+!tsconfig.json
+!**/tsconfig.json
 *.csv
 data/
 metadata.json
