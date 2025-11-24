@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>London Dental Services Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .stat-card .number {
+            font-size: 3em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .stat-card .label {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .chart-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .chart-card h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .clinics-list {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .clinics-list h2 {
+            color: #667eea;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+        }
+
+        .clinic-card {
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .clinic-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+        }
+
+        .clinic-name {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .clinic-info {
+            color: #666;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .clinic-info svg {
+            width: 18px;
+            height: 18px;
+            margin-right: 8px;
+            fill: #667eea;
+        }
+
+        .services-languages {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .services, .languages {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .services h3, .languages h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            margin: 5px 5px 5px 0;
+            font-size: 0.9em;
+        }
+
+        .tag.language {
+            background: #764ba2;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: white;
+            font-size: 1.5em;
+        }
+
+        @media (max-width: 768px) {
+            .services-languages {
+                grid-template-columns: 1fr;
+            }
+            
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🦷 London Dental Services Dashboard</h1>
+            <p>Comprehensive overview of dental clinics, services, and languages</p>
+        </div>
+
+        <div id="loading" class="loading">Loading data...</div>
+
+        <div id="dashboard" style="display: none;">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="number" id="total-clinics">0</div>
+                    <div class="label">Total Clinics</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number" id="total-services">0</div>
+                    <div class="label">Unique Services</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number" id="total-languages">0</div>
+                    <div class="label">Languages Spoken</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number" id="avg-services">0</div>
+                    <div class="label">Avg Services/Clinic</div>
+                </div>
+            </div>
+
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <h2>Top Services Offered</h2>
+                    <canvas id="servicesChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h2>Languages Spoken</h2>
+                    <canvas id="languagesChart"></canvas>
+                </div>
+            </div>
+
+            <div class="clinics-list">
+                <h2>Dental Clinics in London</h2>
+                <div id="clinics-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = window.location.origin;
+        let clinicsData = [];
+
+        // Load data from API or JSON fallback
+        async function loadData() {
+            try {
+                // Try API first
+                try {
+                    const [statsRes, clinicsRes] = await Promise.all([
+                        fetch(`${API_BASE}/api/statistics`),
+                        fetch(`${API_BASE}/api/clinics`)
+                    ]);
+                    
+                    if (statsRes.ok && clinicsRes.ok) {
+                        const stats = await statsRes.json();
+                        clinicsData = await clinicsRes.json();
+                        renderDashboardWithStats(stats);
+                        return;
+                    }
+                } catch (apiError) {
+                    console.log('API not available, trying JSON file...', apiError);
+                }
+                
+                // Fallback to JSON file
+                const response = await fetch('dental_clinics_london.json');
+                clinicsData = await response.json();
+                renderDashboard();
+            } catch (error) {
+                console.error('Error loading data:', error);
+                document.getElementById('loading').innerHTML = 
+                    '<p style="color: white;">Error loading data. Please ensure the API server is running or the JSON file exists.</p>';
+            }
+        }
+
+        function renderDashboardWithStats(stats) {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('dashboard').style.display = 'block';
+
+            // Update stats from API
+            document.getElementById('total-clinics').textContent = stats.total_clinics;
+            document.getElementById('total-services').textContent = stats.total_services;
+            document.getElementById('total-languages').textContent = stats.total_languages;
+            document.getElementById('avg-services').textContent = stats.avg_services_per_clinic;
+
+            // Render charts with API data
+            renderServicesChart(stats.service_counts);
+            renderLanguagesChart(stats.language_counts);
+
+            // Render clinics
+            renderClinics();
+        }
+
+        function renderDashboard() {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('dashboard').style.display = 'block';
+
+            // Calculate statistics
+            const totalClinics = clinicsData.length;
+            const allServices = new Set();
+            const allLanguages = new Set();
+            let totalServicesCount = 0;
+
+            clinicsData.forEach(clinic => {
+                clinic.services?.forEach(s => allServices.add(s));
+                clinic.languages?.forEach(l => allLanguages.add(l));
+                totalServicesCount += clinic.services?.length || 0;
+            });
+
+            // Update stats
+            document.getElementById('total-clinics').textContent = totalClinics;
+            document.getElementById('total-services').textContent = allServices.size;
+            document.getElementById('total-languages').textContent = allLanguages.size;
+            document.getElementById('avg-services').textContent = 
+                totalClinics > 0 ? (totalServicesCount / totalClinics).toFixed(1) : 0;
+
+            // Service frequency
+            const serviceCounts = {};
+            clinicsData.forEach(clinic => {
+                clinic.services?.forEach(service => {
+                    serviceCounts[service] = (serviceCounts[service] || 0) + 1;
+                });
+            });
+
+            // Language frequency
+            const languageCounts = {};
+            clinicsData.forEach(clinic => {
+                clinic.languages?.forEach(lang => {
+                    languageCounts[lang] = (languageCounts[lang] || 0) + 1;
+                });
+            });
+
+            // Render charts
+            renderServicesChart(serviceCounts);
+            renderLanguagesChart(languageCounts);
+
+            // Render clinics
+            renderClinics();
+        }
+
+        function renderServicesChart(serviceCounts) {
+            const sorted = Object.entries(serviceCounts)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 10);
+
+            new Chart(document.getElementById('servicesChart'), {
+                type: 'bar',
+                data: {
+                    labels: sorted.map(s => s[0]),
+                    datasets: [{
+                        label: 'Number of Clinics',
+                        data: sorted.map(s => s[1]),
+                        backgroundColor: 'rgba(102, 126, 234, 0.8)',
+                        borderColor: 'rgba(102, 126, 234, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                stepSize: 1
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function renderLanguagesChart(languageCounts) {
+            const sorted = Object.entries(languageCounts)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 10);
+
+            new Chart(document.getElementById('languagesChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: sorted.map(l => l[0]),
+                    datasets: [{
+                        data: sorted.map(l => l[1]),
+                        backgroundColor: [
+                            'rgba(102, 126, 234, 0.8)',
+                            'rgba(118, 75, 162, 0.8)',
+                            'rgba(255, 99, 132, 0.8)',
+                            'rgba(54, 162, 235, 0.8)',
+                            'rgba(255, 206, 86, 0.8)',
+                            'rgba(75, 192, 192, 0.8)',
+                            'rgba(153, 102, 255, 0.8)',
+                            'rgba(255, 159, 64, 0.8)',
+                            'rgba(199, 199, 199, 0.8)',
+                            'rgba(83, 102, 255, 0.8)'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: {
+                            position: 'right'
+                        }
+                    }
+                }
+            });
+        }
+
+        function renderClinics() {
+            const container = document.getElementById('clinics-container');
+            container.innerHTML = '';
+
+            clinicsData.forEach(clinic => {
+                const card = document.createElement('div');
+                card.className = 'clinic-card';
+
+                const servicesHTML = clinic.services && clinic.services.length > 0
+                    ? clinic.services.map(s => `<span class="tag">${s}</span>`).join('')
+                    : '<span style="color: #999;">No services listed</span>';
+
+                const languagesHTML = clinic.languages && clinic.languages.length > 0
+                    ? clinic.languages.map(l => `<span class="tag language">${l}</span>`).join('')
+                    : '<span style="color: #999;">No languages listed</span>';
+
+                card.innerHTML = `
+                    <div class="clinic-name">${clinic.name || 'Unknown Clinic'}</div>
+                    ${clinic.address ? `
+                        <div class="clinic-info">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                            ${clinic.address}
+                        </div>
+                    ` : ''}
+                    ${clinic.phone ? `
+                        <div class="clinic-info">
+                            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                            ${clinic.phone}
+                        </div>
+                    ` : ''}
+                    ${clinic.link ? `
+                        <div class="clinic-info">
+                            <svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+                            <a href="${clinic.link}" target="_blank" style="color: #667eea;">Visit Website</a>
+                        </div>
+                    ` : ''}
+                    <div class="services-languages">
+                        <div class="services">
+                            <h3>Services Provided</h3>
+                            <div>${servicesHTML}</div>
+                        </div>
+                        <div class="languages">
+                            <h3>Languages Spoken</h3>
+                            <div>${languagesHTML}</div>
+                        </div>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+        }
+
+        // Load data on page load
+        loadData();
+    </script>
+</body>
+</html>
+
