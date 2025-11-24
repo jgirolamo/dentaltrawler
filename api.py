@@ -132,13 +132,19 @@ def calculate_match_score(clinic: Dict, search_text: Optional[str],
         text = search_text.lower()
         name_match = text in clinic.get('name', '').lower()
         address_match = text in clinic.get('address', '').lower()
+        # Also search in languages
+        languages = [l.lower() for l in clinic.get('languages', [])]
+        language_match = any(text in lang for lang in languages)
         
         if name_match:
-            score += 20
+            score += 15
             match_details.append('Name matches')
         if address_match:
             score += 10
             match_details.append('Address matches')
+        if language_match:
+            score += 5
+            match_details.append('Language matches')
     else:
         max_score -= 30
 
@@ -253,6 +259,17 @@ async def search_clinics(request: SearchRequest):
             postcode = clinic.get('postcode', '').upper()
             address = clinic.get('address', '').upper()
             if request.postcode.upper() not in postcode and request.postcode.upper() not in address:
+                continue
+        
+        # Text search filter (searches name, address, and languages)
+        if request.search_text:
+            search_lower = request.search_text.lower()
+            name_match = search_lower in clinic.get('name', '').lower()
+            address_match = search_lower in clinic.get('address', '').lower()
+            languages = [l.lower() for l in clinic.get('languages', [])]
+            language_match = any(search_lower in lang for lang in languages)
+            
+            if not (name_match or address_match or language_match):
                 continue
         
         # Calculate match score
