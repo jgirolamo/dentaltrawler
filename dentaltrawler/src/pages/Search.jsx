@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { api } from '../api';
+import { clinicsData } from '../data/clinics';
 import './Search.css';
 
 function Search() {
@@ -30,53 +30,115 @@ function Search() {
   });
 
   useEffect(() => {
-    loadInitialData();
+    // Extract unique services and languages from data
+    const allServices = new Set();
+    const allLanguages = new Set();
+    
+    clinicsData.forEach(clinic => {
+      clinic.services?.forEach(s => allServices.add(s));
+      clinic.languages?.forEach(l => allLanguages.add(l));
+    });
+    
+    setServices(Array.from(allServices).sort());
+    setLanguages(Array.from(allLanguages).sort());
+    setMetadata({ last_updated: new Date().toISOString(), total_clinics: clinicsData.length });
   }, []);
 
-  async function loadInitialData() {
-    try {
-      const [servicesData, languagesData, metadataData] = await Promise.all([
-        api.getServices().catch(() => []),
-        api.getLanguages().catch(() => []),
-        api.getMetadata().catch(() => null)
-      ]);
-      
-      setServices(servicesData);
-      setLanguages(languagesData);
-      setMetadata(metadataData);
-    } catch (error) {
-      console.error('Error loading initial data:', error);
+  function calculateMatchScore(clinic, searchText, selectedServices, selectedLanguages) {
+    let score = 0;
+    const maxScore = 100;
+
+    // Text search (30 points)
+    if (searchText) {
+      const text = searchText.toLowerCase();
+      if (clinic.name?.toLowerCase().includes(text)) score += 12;
+      if (clinic.address?.toLowerCase().includes(text)) score += 8;
+      if (clinic.languages?.some(l => l.toLowerCase().includes(text))) score += 5;
+      if (clinic.services?.some(s => s.toLowerCase().includes(text))) score += 5;
     }
+
+    // Services match (40 points)
+    if (selectedServices.length > 0) {
+      const matched = selectedServices.filter(s => 
+        clinic.services?.some(cs => cs.toLowerCase() === s.toLowerCase())
+      );
+      score += (matched.length / selectedServices.length) * 40;
+    }
+
+    // Languages match (30 points)
+    if (selectedLanguages.length > 0) {
+      const matched = selectedLanguages.filter(l => 
+        clinic.languages?.some(cl => cl.toLowerCase() === l.toLowerCase())
+      );
+      score += (matched.length / selectedLanguages.length) * 30;
+    }
+
+    return Math.round((score / maxScore) * 100);
   }
 
-  async function performSearch() {
+  function performSearch() {
     setLoading(true);
-    try {
-      const searchRequest = {
-        search_text: searchText || null,
-        area: areaFilter || null,
-        postcode: postcodeFilter || null,
-        services: selectedServices,
-        languages: selectedLanguages,
-        nhs: filters.nhs || null,
-        private: filters.private || null,
-        emergency: filters.emergency || null,
-        children: filters.children || null,
-        wheelchair: filters.wheelchair || null,
-        parking: filters.parking || null,
-        min_rating: minRating > 0 ? minRating : null,
-        min_score: minScore,
-        sort_by: sortBy
-      };
-
-      const searchResults = await api.searchClinics(searchRequest);
-      setResults(searchResults);
-    } catch (error) {
-      console.error('Search error:', error);
-      alert('Search failed. Please try again.');
-    } finally {
-      setLoading(false);
-    }
+    setTimeout(() => {
+      try {
+        const results = [];
+        
+        for (const clinic of clinicsData) {
+          // Apply filters
+          if (filters.nhs && !clinic.nhs) continue;
+          if (filters.private && !clinic.private) continue;
+          if (filters.emergency && !clinic.emergency) continue;
+          if (filters.children && !clinic.children) continue;
+          if (filters.wheelchair && !clinic.wheelchair_access) continue;
+          if (filters.parking && !clinic.parking) continue;
+          if (minRating > 0 && (!clinic.rating || clinic.rating < minRating)) continue;
+          
+          if (areaFilter && !clinic.area?.toLowerCase().includes(areaFilter.toLowerCase()) && 
+              !clinic.address?.toLowerCase().includes(areaFilter.toLowerCase())) continue;
+          
+          if (postcodeFilter && !clinic.postcode?.toUpperCase().includes(postcodeFilter.toUpperCase()) &&
+              !clinic.address?.toUpperCase().includes(postcodeFilter.toUpperCase())) continue;
+          
+          // Text search filter
+          if (searchText) {
+            const text = searchText.toLowerCase();
+            const matches = 
+              clinic.name?.toLowerCase().includes(text) ||
+              clinic.address?.toLowerCase().includes(text) ||
+              clinic.languages?.some(l => l.toLowerCase().includes(text)) ||
+              clinic.services?.some(s => s.toLowerCase().includes(text));
+            if (!matches) continue;
+          }
+          
+          // Calculate match score
+          const score = calculateMatchScore(clinic, searchText, selectedServices, selectedLanguages);
+          if (score < minScore) continue;
+          
+          results.push({ 
+            clinic, 
+            match: { score, details: [], matched_services: [], matched_languages: [] }, 
+            score 
+          });
+        }
+        
+        // Sort results
+        if (sortBy === 'match') {
+          results.sort((a, b) => b.score - a.score);
+        } else if (sortBy === 'name') {
+          results.sort((a, b) => a.clinic.name.localeCompare(b.clinic.name));
+        } else if (sortBy === 'services') {
+          results.sort((a, b) => (b.clinic.services?.length || 0) - (a.clinic.services?.length || 0));
+        } else if (sortBy === 'rating') {
+          results.sort((a, b) => (b.clinic.rating || 0) - (a.clinic.rating || 0));
+        }
+        
+        setResults(results);
+      } catch (error) {
+        console.error('Search error:', error);
+        setResults([]);
+      } finally {
+        setLoading(false);
+      }
+    }, 100);
   }
 
   function toggleService(service) {

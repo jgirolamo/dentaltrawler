@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, ArcElement, Title, Tooltip, Legend } from 'chart.js';
 import { Bar, Doughnut } from 'react-chartjs-2';
-import { api } from '../api';
+import { clinicsData } from '../data/clinics';
 import './Dashboard.css';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, ArcElement, Title, Tooltip, Legend);
@@ -16,19 +16,38 @@ function Dashboard() {
     loadData();
   }, []);
 
-  async function loadData() {
+  function loadData() {
     try {
-      const [statsData, clinicsData] = await Promise.all([
-        api.getStatistics(),
-        api.getClinics()
-      ]);
-      
-      // Debug: Check if languages are present
-      console.log('Sample clinic data:', clinicsData[0]);
-      console.log('Languages in first clinic:', clinicsData[0]?.languages);
-      
-      setStats(statsData);
       setClinics(clinicsData);
+      
+      // Calculate statistics
+      const allServices = new Set();
+      const allLanguages = new Set();
+      const serviceCounts = {};
+      const languageCounts = {};
+      let totalServices = 0;
+      
+      clinicsData.forEach(clinic => {
+        clinic.services?.forEach(s => {
+          allServices.add(s);
+          serviceCounts[s] = (serviceCounts[s] || 0) + 1;
+          totalServices++;
+        });
+        clinic.languages?.forEach(l => {
+          allLanguages.add(l);
+          languageCounts[l] = (languageCounts[l] || 0) + 1;
+        });
+      });
+      
+      setStats({
+        total_clinics: clinicsData.length,
+        total_services: allServices.size,
+        total_languages: allLanguages.size,
+        avg_services_per_clinic: (totalServices / clinicsData.length).toFixed(1),
+        service_counts: serviceCounts,
+        language_counts: languageCounts,
+        last_updated: new Date().toISOString()
+      });
     } catch (error) {
       console.error('Error loading dashboard data:', error);
     } finally {
