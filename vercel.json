@@ -9,20 +9,10 @@
       }
     }
   ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/dentaltrawler/$1"
-    }
-  ],
   "rewrites": [
     {
       "source": "/(.*)",
       "destination": "/dentaltrawler/$1"
-    },
-    {
-      "source": "/((?!dentaltrawler/).*)",
-      "destination": "/dentaltrawler/index.html"
     }
   ]
 }
