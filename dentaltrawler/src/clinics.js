@@ -151,6 +151,25 @@ export const clinicsData = [
     parking: true,
     rating: 4.9,
     opening_hours: "Mon-Fri: 8am-6pm, Sat: 9am-4pm"
+  },
+  {
+    name: "Maida Vale Orthodontics",
+    address: "78 Maida Vale, London NW6 1AE",
+    phone: "020 7289 1234",
+    services: ["Orthodontics", "General Dentistry", "Teeth Whitening", "Braces"],
+    languages: ["English", "French", "Spanish"],
+    link: "https://example-dental-9.co.uk",
+    source: "Sample Data",
+    area: "Maida Vale",
+    postcode: "NW6 1AE",
+    nhs: true,
+    private: true,
+    emergency: false,
+    children: true,
+    wheelchair_access: true,
+    parking: true,
+    rating: 4.7,
+    opening_hours: "Mon-Fri: 9am-6pm, Sat: 10am-2pm"
   }
 ];
 
