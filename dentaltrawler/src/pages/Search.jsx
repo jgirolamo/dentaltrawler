@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { clinicsData } from '../data/clinics';
+import { clinicsData } from '../clinics';
 import './Search.css';
 
 function Search() {
