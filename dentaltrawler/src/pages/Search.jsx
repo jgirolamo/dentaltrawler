@@ -42,6 +42,14 @@ function Search() {
     setServices(Array.from(allServices).sort());
     setLanguages(Array.from(allLanguages).sort());
     setMetadata({ last_updated: new Date().toISOString(), total_clinics: clinicsData.length });
+    
+    // Auto-search on initial load to show all clinics
+    const initialResults = clinicsData.map(clinic => ({
+      clinic,
+      match: { score: 100, details: [], matched_services: [], matched_languages: [] },
+      score: 100
+    }));
+    setResults(initialResults);
   }, []);
 
   function calculateMatchScore(clinic, searchText, selectedServices, selectedLanguages) {
