@@ -116,8 +116,19 @@ function Search() {
           if (areaFilter && !clinic.area?.toLowerCase().includes(areaFilter.toLowerCase()) && 
               !clinic.address?.toLowerCase().includes(areaFilter.toLowerCase())) continue;
           
-          if (postcodeFilter && !clinic.postcode?.toUpperCase().includes(postcodeFilter.toUpperCase()) &&
-              !clinic.address?.toUpperCase().includes(postcodeFilter.toUpperCase())) continue;
+          if (postcodeFilter) {
+            const filterUpper = postcodeFilter.toUpperCase().trim();
+            const clinicPostcode = (clinic.postcode || '').toUpperCase();
+            const clinicAddress = (clinic.address || '').toUpperCase();
+            
+            // Accept 3+ character postcode matches (e.g., "NW6", "W1C", "SW3")
+            // Match if postcode starts with filter or contains it
+            const postcodeMatch = clinicPostcode.includes(filterUpper) || 
+                                 clinicPostcode.startsWith(filterUpper) ||
+                                 clinicAddress.includes(filterUpper);
+            
+            if (!postcodeMatch) continue;
+          }
           
           // Text search filter
           if (searchText) {
@@ -402,8 +413,21 @@ function Search() {
           <div className="results-section">
             <div className="results-header">
               <h2>Search Results</h2>
-              <div className="results-count">
-                {results.length} clinic{results.length !== 1 ? 's' : ''} found
+              <div className="results-stats">
+                <div className="results-count">
+                  {results.length} of {clinicsData.length} clinic{clinicsData.length !== 1 ? 's' : ''} found
+                </div>
+                <div className="progress-bar-container">
+                  <div className="progress-bar">
+                    <div 
+                      className="progress-bar-fill" 
+                      style={{ width: `${(results.length / clinicsData.length) * 100}%` }}
+                    ></div>
+                  </div>
+                  <span className="progress-percentage">
+                    {Math.round((results.length / clinicsData.length) * 100)}%
+                  </span>
+                </div>
               </div>
             </div>
             <div className="results-container">
