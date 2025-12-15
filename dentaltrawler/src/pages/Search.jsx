@@ -21,8 +21,6 @@ function Search() {
   const [minScore, setMinScore] = useState(0);
   const [minRating, setMinRating] = useState(0);
   const [filters, setFilters] = useState({
-    nhs: false,
-    private: false,
     emergency: false,
     children: false,
     wheelchair: false,
@@ -106,8 +104,8 @@ function Search() {
         const results = [];
         
         for (const clinic of clinicsData) {
-          // Apply filters
-          if (filters.nhs && !clinic.nhs) continue;
+          // Apply filters (private clinics only)
+          if (!clinic.private) continue; // Only show private clinics
           if (filters.private && !clinic.private) continue;
           if (filters.emergency && !clinic.emergency) continue;
           if (filters.children && !clinic.children) continue;
@@ -187,8 +185,6 @@ function Search() {
     setSelectedServices([]);
     setSelectedLanguages([]);
     setFilters({
-      nhs: false,
-      private: false,
       emergency: false,
       children: false,
       wheelchair: false,
@@ -207,7 +203,7 @@ function Search() {
 
   const hasActiveFilters = searchText || areaFilter || postcodeFilter || 
     selectedServices.length > 0 || selectedLanguages.length > 0 ||
-    Object.values(filters).some(v => v) || minScore > 0 || minRating > 0;
+    filters.emergency || filters.children || filters.wheelchair || filters.parking || minScore > 0 || minRating > 0;
 
   return (
     <div className="search-page">
@@ -325,26 +321,10 @@ function Search() {
                     <label className="feature-checkbox">
                       <input
                         type="checkbox"
-                        checked={filters.nhs}
-                        onChange={(e) => setFilters({...filters, nhs: e.target.checked})}
-                      />
-                      <span>NHS Accepting</span>
-                    </label>
-                    <label className="feature-checkbox">
-                      <input
-                        type="checkbox"
-                        checked={filters.private}
-                        onChange={(e) => setFilters({...filters, private: e.target.checked})}
-                      />
-                      <span>Private</span>
-                    </label>
-                    <label className="feature-checkbox">
-                      <input
-                        type="checkbox"
                         checked={filters.emergency}
                         onChange={(e) => setFilters({...filters, emergency: e.target.checked})}
                       />
-                      <span>Emergency</span>
+                      <span>Emergency Services</span>
                     </label>
                     <label className="feature-checkbox">
                       <input
