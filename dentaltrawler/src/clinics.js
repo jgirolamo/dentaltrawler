@@ -1,4 +1,4 @@
-// Real London dental clinic data
+// London dental clinic data - includes both NHS and private practices
 export const clinicsData = [
   {
     name: "Bupa Dental Care - Oxford Street",

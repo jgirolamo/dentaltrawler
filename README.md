@@ -1,6 +1,7 @@
-# Dental Service Trawler for London, UK
+# Dental Clinic Search for London, UK
 
-A web scraper that collects information about dental clinics in London, UK, including:
+A search tool for finding dental clinics in London, UK, including:
+- NHS and private practices
 - Services provided
 - Languages spoken at the clinic
 
