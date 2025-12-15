@@ -263,7 +263,7 @@ function Search() {
               <input
                 type="text"
                 className="quick-filter-input"
-                placeholder="Postcode (e.g., W1)"
+                placeholder="Postcode (e.g., NW6, W1C, SW3)"
                 value={postcodeFilter}
                 onChange={(e) => setPostcodeFilter(e.target.value)}
               />
