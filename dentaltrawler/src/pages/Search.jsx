@@ -30,26 +30,41 @@ function Search() {
   });
 
   useEffect(() => {
-    // Extract unique services and languages from data
-    const allServices = new Set();
-    const allLanguages = new Set();
+    // Try to fetch real data first, fallback to embedded data
+    async function loadData() {
+      try {
+        // Try fetching real NHS data (if available)
+        // const realClinics = await fetchRealClinics();
+        // if (realClinics.length > 0) {
+        //   clinicsData = realClinics;
+        // }
+      } catch (error) {
+        console.log('Using embedded clinic data');
+      }
+      
+      // Extract unique services and languages from data
+      const allServices = new Set();
+      const allLanguages = new Set();
+      
+      clinicsData.forEach(clinic => {
+        clinic.services?.forEach(s => allServices.add(s));
+        clinic.languages?.forEach(l => allLanguages.add(l));
+      });
+      
+      setServices(Array.from(allServices).sort());
+      setLanguages(Array.from(allLanguages).sort());
+      setMetadata({ last_updated: new Date().toISOString(), total_clinics: clinicsData.length });
+      
+      // Auto-search on initial load to show all clinics
+      const initialResults = clinicsData.map(clinic => ({
+        clinic,
+        match: { score: 100, details: [], matched_services: [], matched_languages: [] },
+        score: 100
+      }));
+      setResults(initialResults);
+    }
     
-    clinicsData.forEach(clinic => {
-      clinic.services?.forEach(s => allServices.add(s));
-      clinic.languages?.forEach(l => allLanguages.add(l));
-    });
-    
-    setServices(Array.from(allServices).sort());
-    setLanguages(Array.from(allLanguages).sort());
-    setMetadata({ last_updated: new Date().toISOString(), total_clinics: clinicsData.length });
-    
-    // Auto-search on initial load to show all clinics
-    const initialResults = clinicsData.map(clinic => ({
-      clinic,
-      match: { score: 100, details: [], matched_services: [], matched_languages: [] },
-      score: 100
-    }));
-    setResults(initialResults);
+    loadData();
   }, []);
 
   function calculateMatchScore(clinic, searchText, selectedServices, selectedLanguages) {
