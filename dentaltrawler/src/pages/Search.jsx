@@ -83,6 +83,8 @@ function Search() {
         
         // Limit to MAX_RESULTS for initial display
         const limitedInitialResults = initialResults.slice(0, MAX_RESULTS);
+        console.log(`📊 Setting results: ${limitedInitialResults.length} clinics`);
+        console.log(`📊 First result:`, limitedInitialResults[0]);
         setResults(limitedInitialResults);
         
         console.log(`✅ Initial results set: ${limitedInitialResults.length} clinics`);
@@ -255,6 +257,15 @@ function Search() {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const currentResults = results.slice(startIndex, endIndex);
+  
+  // Debug logging
+  useEffect(() => {
+    console.log(`🔍 Results state: ${results.length} total, ${currentResults.length} on current page`);
+    console.log(`🔍 Current page: ${currentPage}, Items per page: ${itemsPerPage}`);
+    if (results.length > 0) {
+      console.log(`🔍 First result in state:`, results[0]);
+    }
+  }, [results, currentPage, itemsPerPage]);
   
   // Handle page change
   function handlePageChange(page) {
@@ -551,7 +562,14 @@ function Search() {
               </div>
             </div>
             <div className="results-container">
-              {currentResults.map((result, index) => {
+              {console.log(`🎨 Rendering ${currentResults.length} results on page ${currentPage}`)}
+              {currentResults.length === 0 ? (
+                <div style={{ padding: '20px', textAlign: 'center', color: '#666' }}>
+                  <p>No results to display on this page.</p>
+                  <p>Total results: {totalResults}, Current page: {currentPage}, Items per page: {itemsPerPage}</p>
+                </div>
+              ) : (
+                currentResults.map((result, index) => {
                 const { clinic, match } = result;
                 const scoreClass = getScoreClass(match.score);
                 
@@ -659,7 +677,7 @@ function Search() {
                     </div>
                   </div>
                 );
-              })}
+              }))}
             </div>
             
             {/* Pagination Controls */}
@@ -717,6 +735,12 @@ function Search() {
             <div className="empty-icon">🔍</div>
             <h3>No results yet</h3>
             <p>Use the search form above to find dental clinics in London</p>
+            <div style={{ marginTop: '20px', fontSize: '0.9em', color: '#666' }}>
+              <p>Debug info:</p>
+              <p>clinicsData length: {clinicsData?.length || 'undefined'}</p>
+              <p>results length: {results.length}</p>
+              <p>loading: {loading ? 'true' : 'false'}</p>
+            </div>
           </div>
         )}
       </div>
