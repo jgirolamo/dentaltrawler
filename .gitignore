@@ -42,3 +42,16 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Temporary files
+*.swp
+*.swo
+*.tmp
+*.deb
+*.html
+data/*.html
+data/*_page_source.html
+
+# Chrome/Chromium installers
+google-chrome-stable*.deb
+chromium*.deb

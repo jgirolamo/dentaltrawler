@@ -1,15 +1,15 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { api } from '../api';
+import { clinicsData } from '../clinics';
 import './Search.css';
 
 function Search() {
-  const [services, setServices] = useState([]);
-  const [languages, setLanguages] = useState([]);
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [metadata, setMetadata] = useState(null);
   const [showFilters, setShowFilters] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(50);
+  const MAX_RESULTS = 300;
   
   // Search form state
   const [searchText, setSearchText] = useState('');
@@ -29,54 +29,206 @@ function Search() {
     parking: false
   });
 
-  useEffect(() => {
-    loadInitialData();
+  // Extract unique services and languages from embedded data
+  const { services, languages } = useMemo(() => {
+    const allServices = new Set();
+    const allLanguages = new Set();
+    
+    clinicsData.forEach(clinic => {
+      (clinic.services || []).forEach(s => allServices.add(s));
+      (clinic.languages || []).forEach(l => allLanguages.add(l));
+    });
+    
+    return {
+      services: Array.from(allServices).sort(),
+      languages: Array.from(allLanguages).sort()
+    };
   }, []);
 
-  async function loadInitialData() {
-    try {
-      const [servicesData, languagesData, metadataData] = await Promise.all([
-        api.getServices().catch(() => []),
-        api.getLanguages().catch(() => []),
-        api.getMetadata().catch(() => null)
-      ]);
+  // Load all clinics on initial page load
+  useEffect(() => {
+    // Show all clinics initially (no filters)
+    const initialResults = clinicsData.map(clinic => {
+      const match = calculateMatchScore(clinic, null, [], []);
+      return {
+        clinic: clinic,
+        match: match,
+        score: match.score
+      };
+    });
+    
+    // Sort by name initially
+    initialResults.sort((a, b) => (a.clinic.name || '').localeCompare(b.clinic.name || ''));
+    
+    // Limit to MAX_RESULTS
+    setResults(initialResults.slice(0, MAX_RESULTS));
+  }, []);
+
+  // Calculate match score (same logic as backend)
+  function calculateMatchScore(clinic, searchText, selectedServices, selectedLanguages) {
+    let score = 0;
+    let maxScore = 100;
+    const matchDetails = [];
+    const matchedServices = [];
+    const matchedLanguages = [];
+
+    // Text search (30 points)
+    if (searchText) {
+      const text = searchText.toLowerCase();
+      const nameMatch = (clinic.name || '').toLowerCase().includes(text);
+      const addressMatch = (clinic.address || '').toLowerCase().includes(text);
+      const languages = (clinic.languages || []).map(l => l.toLowerCase());
+      const languageMatch = languages.some(lang => lang.includes(text));
+      const services = (clinic.services || []).map(s => s.toLowerCase());
+      const serviceMatch = services.some(svc => svc.includes(text));
       
-      setServices(servicesData);
-      setLanguages(languagesData);
-      setMetadata(metadataData);
-    } catch (error) {
-      console.error('Error loading initial data:', error);
+      if (nameMatch) {
+        score += 12;
+        matchDetails.push('Name matches');
+      }
+      if (addressMatch) {
+        score += 8;
+        matchDetails.push('Address matches');
+      }
+      if (languageMatch) {
+        score += 5;
+        matchDetails.push('Language matches');
+      }
+      if (serviceMatch) {
+        score += 5;
+        matchDetails.push('Service matches');
+      }
+    } else {
+      maxScore -= 30;
     }
+
+    // Services match (40 points)
+    if (selectedServices.length > 0) {
+      const clinicServices = (clinic.services || []).map(s => s.toLowerCase());
+      selectedServices.forEach(s => {
+        if (clinicServices.some(cs => cs === s.toLowerCase())) {
+          matchedServices.push(s);
+        }
+      });
+      const serviceScore = (matchedServices.length / selectedServices.length) * 40;
+      score += serviceScore;
+      
+      if (matchedServices.length > 0) {
+        matchDetails.push(`${matchedServices.length}/${selectedServices.length} services matched`);
+      }
+    } else {
+      maxScore -= 40;
+    }
+
+    // Languages match (30 points)
+    if (selectedLanguages.length > 0) {
+      const clinicLanguages = (clinic.languages || []).map(l => l.toLowerCase());
+      selectedLanguages.forEach(l => {
+        if (clinicLanguages.some(cl => cl === l.toLowerCase())) {
+          matchedLanguages.push(l);
+        }
+      });
+      const languageScore = (matchedLanguages.length / selectedLanguages.length) * 30;
+      score += languageScore;
+      
+      if (matchedLanguages.length > 0) {
+        matchDetails.push(`${matchedLanguages.length}/${selectedLanguages.length} languages matched`);
+      }
+    } else {
+      maxScore -= 30;
+    }
+
+    // Normalize score to percentage
+    const percentage = maxScore > 0 ? Math.round((score / maxScore) * 100) : 100;
+    
+    return {
+      score: percentage,
+      details: matchDetails,
+      matched_services: matchedServices,
+      matched_languages: matchedLanguages
+    };
   }
 
-  async function performSearch() {
+  function performSearch() {
     setLoading(true);
-    try {
-      const searchRequest = {
-        search_text: searchText || null,
-        area: areaFilter || null,
-        postcode: postcodeFilter || null,
-        services: selectedServices,
-        languages: selectedLanguages,
-        nhs: filters.nhs || null,
-        private: filters.private || null,
-        emergency: filters.emergency || null,
-        children: filters.children || null,
-        wheelchair: filters.wheelchair || null,
-        parking: filters.parking || null,
-        min_rating: minRating > 0 ? minRating : null,
-        min_score: minScore,
-        sort_by: sortBy
-      };
-
-      const searchResults = await api.searchClinics(searchRequest);
-      setResults(searchResults);
-    } catch (error) {
-      console.error('Search error:', error);
-      alert('Search failed. Please try again.');
-    } finally {
+    setCurrentPage(1); // Reset to first page on new search
+    
+    // Use setTimeout to allow UI to update
+    setTimeout(() => {
+      const searchResults = [];
+      
+      for (const clinic of clinicsData) {
+        // Basic filters
+        if (filters.nhs && !clinic.nhs) continue;
+        if (filters.private && !clinic.private) continue;
+        if (filters.emergency && !clinic.emergency) continue;
+        if (filters.children && !clinic.children) continue;
+        if (filters.wheelchair && !clinic.wheelchair_access) continue;
+        if (filters.parking && !clinic.parking) continue;
+        if (minRating > 0 && (!clinic.rating || clinic.rating < minRating)) continue;
+        
+        // Area and postcode filters
+        if (areaFilter) {
+          const area = (clinic.area || '').toLowerCase();
+          const address = (clinic.address || '').toLowerCase();
+          if (!area.includes(areaFilter.toLowerCase()) && !address.includes(areaFilter.toLowerCase())) {
+            continue;
+          }
+        }
+        
+        if (postcodeFilter) {
+          const postcode = (clinic.postcode || '').toUpperCase();
+          const address = (clinic.address || '').toUpperCase();
+          if (!postcode.includes(postcodeFilter.toUpperCase()) && !address.includes(postcodeFilter.toUpperCase())) {
+            continue;
+          }
+        }
+        
+        // Text search filter
+        if (searchText) {
+          const searchLower = searchText.toLowerCase();
+          const nameMatch = (clinic.name || '').toLowerCase().includes(searchLower);
+          const addressMatch = (clinic.address || '').toLowerCase().includes(searchLower);
+          const languages = (clinic.languages || []).map(l => l.toLowerCase());
+          const languageMatch = languages.some(lang => lang.includes(searchLower));
+          const services = (clinic.services || []).map(s => s.toLowerCase());
+          const serviceMatch = services.some(svc => svc.includes(searchLower));
+          
+          if (!(nameMatch || addressMatch || languageMatch || serviceMatch)) {
+            continue;
+          }
+        }
+        
+        // Calculate match score
+        const match = calculateMatchScore(clinic, searchText, selectedServices, selectedLanguages);
+        
+        if (match.score < minScore) {
+          continue;
+        }
+        
+        searchResults.push({
+          clinic: clinic,
+          match: match,
+          score: match.score
+        });
+      }
+      
+      // Sort results
+      if (sortBy === "match") {
+        searchResults.sort((a, b) => b.score - a.score);
+      } else if (sortBy === "name") {
+        searchResults.sort((a, b) => (a.clinic.name || '').localeCompare(b.clinic.name || ''));
+      } else if (sortBy === "services") {
+        searchResults.sort((a, b) => (b.clinic.services || []).length - (a.clinic.services || []).length);
+      } else if (sortBy === "rating") {
+        searchResults.sort((a, b) => (b.clinic.rating || 0) - (a.clinic.rating || 0));
+      }
+      
+      // Limit results
+      const limitedResults = searchResults.slice(0, MAX_RESULTS);
+      setResults(limitedResults);
       setLoading(false);
-    }
+    }, 10);
   }
 
   function toggleService(service) {
@@ -124,15 +276,76 @@ function Search() {
     selectedServices.length > 0 || selectedLanguages.length > 0 ||
     Object.values(filters).some(v => v) || minScore > 0 || minRating > 0;
 
+  // Load all clinics on initial page load
+  useEffect(() => {
+    // Show all clinics initially (no filters)
+    const initialResults = clinicsData.map(clinic => {
+      const match = calculateMatchScore(clinic, null, [], []);
+      return {
+        clinic: clinic,
+        match: match,
+        score: match.score
+      };
+    });
+    
+    // Sort by name initially
+    initialResults.sort((a, b) => (a.clinic.name || '').localeCompare(b.clinic.name || ''));
+    
+    // Limit to MAX_RESULTS
+    setResults(initialResults.slice(0, MAX_RESULTS));
+  }, []);
+
+  // Pagination calculations
+  const totalResults = results.length;
+  const totalPages = Math.ceil(totalResults / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentResults = results.slice(startIndex, endIndex);
+
+  function handlePageChange(page) {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function handleItemsPerPageChange(newItemsPerPage) {
+    setItemsPerPage(newItemsPerPage);
+    setCurrentPage(1); // Reset to first page when changing items per page
+  }
+
+  function getPageNumbers() {
+    const pages = [];
+    const maxVisible = 7;
+    
+    if (totalPages <= maxVisible) {
+      for (let i = 1; i <= totalPages; i++) {
+        pages.push(i);
+      }
+    } else {
+      if (currentPage <= 3) {
+        for (let i = 1; i <= 5; i++) pages.push(i);
+        pages.push('ellipsis');
+        pages.push(totalPages);
+      } else if (currentPage >= totalPages - 2) {
+        pages.push(1);
+        pages.push('ellipsis');
+        for (let i = totalPages - 4; i <= totalPages; i++) pages.push(i);
+      } else {
+        pages.push(1);
+        pages.push('ellipsis');
+        for (let i = currentPage - 1; i <= currentPage + 1; i++) pages.push(i);
+        pages.push('ellipsis');
+        pages.push(totalPages);
+      }
+    }
+    return pages;
+  }
+
   return (
     <div className="search-page">
       <div className="container">
         <div className="header">
-          <h1>🔍 Dental Clinic Search</h1>
+          <h1>🔍 Private Dental Clinic Search</h1>
           <p>Find the perfect dental clinic in London based on services and languages</p>
-          {metadata?.last_updated && (
-            <small>Last updated: {new Date(metadata.last_updated).toLocaleString()}</small>
-          )}
           <div className="header-actions">
             <Link to="/dashboard" className="dashboard-link">
               📊 View Dashboard
@@ -337,12 +550,31 @@ function Search() {
           <div className="results-section">
             <div className="results-header">
               <h2>Search Results</h2>
-              <div className="results-count">
-                {results.length} clinic{results.length !== 1 ? 's' : ''} found
+              <div className="results-stats">
+                <div className="results-count">
+                  Showing {startIndex + 1}-{Math.min(endIndex, totalResults)} of {totalResults} 
+                  {totalResults >= MAX_RESULTS && ` (limited to ${MAX_RESULTS} max)`} clinic{totalResults !== 1 ? 's' : ''} found
+                </div>
+                <div className="results-controls">
+                  <div className="items-per-page-selector">
+                    <label htmlFor="itemsPerPage">Show:</label>
+                    <select
+                      id="itemsPerPage"
+                      value={itemsPerPage}
+                      onChange={(e) => handleItemsPerPageChange(Number(e.target.value))}
+                      className="items-per-page-select"
+                    >
+                      <option value={25}>25</option>
+                      <option value={50}>50</option>
+                      <option value={100}>100</option>
+                    </select>
+                    <span>per page</span>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="results-container">
-              {results.map((result, index) => {
+              {currentResults.map((result, index) => {
                 const { clinic, match } = result;
                 const scoreClass = getScoreClass(match.score);
                 
@@ -452,6 +684,49 @@ function Search() {
                 );
               })}
             </div>
+            
+            {totalPages > 1 && (
+              <div className="pagination">
+                <button
+                  className="pagination-button"
+                  onClick={() => handlePageChange(currentPage - 1)}
+                  disabled={currentPage === 1}
+                >
+                  ← Previous
+                </button>
+                
+                <div className="pagination-pages">
+                  {getPageNumbers().map((page, idx) => {
+                    if (page === 'ellipsis') {
+                      return <span key={`ellipsis-${idx}`} className="pagination-ellipsis">...</span>;
+                    }
+                    return (
+                      <button
+                        key={page}
+                        className={`pagination-page ${currentPage === page ? 'active' : ''}`}
+                        onClick={() => handlePageChange(page)}
+                      >
+                        {page}
+                      </button>
+                    );
+                  })}
+                </div>
+                
+                <button
+                  className="pagination-button"
+                  onClick={() => handlePageChange(currentPage + 1)}
+                  disabled={currentPage === totalPages}
+                >
+                  Next →
+                </button>
+              </div>
+            )}
+            
+            {totalResults >= MAX_RESULTS && (
+              <div className="results-limit-notice">
+                <small>⚠️ Results limited to {MAX_RESULTS} clinics. Refine your search for more specific results.</small>
+              </div>
+            )}
           </div>
         )}
 

@@ -1,58 +1,50 @@
-import { useState, useEffect } from 'react';
+import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, ArcElement, Title, Tooltip, Legend } from 'chart.js';
 import { Bar, Doughnut } from 'react-chartjs-2';
-import { api } from '../api';
+import { clinicsData } from '../clinics';
 import './Dashboard.css';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, ArcElement, Title, Tooltip, Legend);
 
 function Dashboard() {
-  const [stats, setStats] = useState(null);
-  const [clinics, setClinics] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // Calculate statistics from embedded data
+  const stats = useMemo(() => {
+    const allServices = new Set();
+    const allLanguages = new Set();
+    const serviceCounts = {};
+    const languageCounts = {};
+    let totalServicesCount = 0;
 
-  useEffect(() => {
-    loadData();
+    clinicsData.forEach(clinic => {
+      const services = clinic.services || [];
+      const languages = clinic.languages || [];
+
+      services.forEach(service => {
+        allServices.add(service);
+        serviceCounts[service] = (serviceCounts[service] || 0) + 1;
+      });
+
+      languages.forEach(language => {
+        allLanguages.add(language);
+        languageCounts[language] = (languageCounts[language] || 0) + 1;
+      });
+
+      totalServicesCount += services.length;
+    });
+
+    const avgServices = clinicsData.length > 0 ? totalServicesCount / clinicsData.length : 0;
+
+    return {
+      total_clinics: clinicsData.length,
+      total_services: allServices.size,
+      total_languages: allLanguages.size,
+      avg_services_per_clinic: Math.round(avgServices * 10) / 10,
+      service_counts: serviceCounts,
+      language_counts: languageCounts
+    };
   }, []);
 
-  async function loadData() {
-    try {
-      const [statsData, clinicsData] = await Promise.all([
-        api.getStatistics(),
-        api.getClinics()
-      ]);
-      
-      // Debug: Check if languages are present
-      console.log('Sample clinic data:', clinicsData[0]);
-      console.log('Languages in first clinic:', clinicsData[0]?.languages);
-      
-      setStats(statsData);
-      setClinics(clinicsData);
-    } catch (error) {
-      console.error('Error loading dashboard data:', error);
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  if (loading) {
-    return (
-      <div className="container">
-        <div className="loading">Loading data...</div>
-      </div>
-    );
-  }
-
-  if (!stats) {
-    return (
-      <div className="container">
-        <div className="loading">
-          <p>Error loading data. Please ensure the API server is running.</p>
-        </div>
-      </div>
-    );
-  }
 
   // Prepare chart data
   const servicesData = {
@@ -122,9 +114,6 @@ function Dashboard() {
       <div className="header">
         <h1>🦷 London Dental Services Dashboard</h1>
         <p>Comprehensive overview of dental clinics, services, and languages</p>
-        {stats.last_updated && (
-          <small>Last updated: {new Date(stats.last_updated).toLocaleString()}</small>
-        )}
         <div style={{ marginTop: '20px' }}>
           <Link to="/" style={{ color: '#667eea', textDecoration: 'none', fontWeight: '600' }}>
             ← Back to Search
@@ -166,10 +155,10 @@ function Dashboard() {
         </div>
       </div>
 
-      <div className="clinics-list">
+        <div className="clinics-list">
         <h2>Dental Clinics in London</h2>
         <div className="clinics-container">
-          {clinics.map((clinic, index) => (
+          {clinicsData.map((clinic, index) => (
             <div key={index} className="clinic-card">
               <div className="clinic-name">{clinic.name || 'Unknown Clinic'}</div>
               {clinic.address && (

@@ -412,6 +412,9 @@ class PrivateClinicFetcher:
             except (EOFError, KeyboardInterrupt):
                 enrich_websites = False  # Default to no in non-interactive mode
         
+        # Skip enrichment in non-interactive mode (too slow)
+        enrich_websites = False
+        
         if enrich_websites:
             print(f"\n🌐 Enriching {len(self.clinics)} clinics with website data...")
             for i, clinic in enumerate(self.clinics):
@@ -540,9 +543,7 @@ def main():
         print("   3. Enable 'Places API'")
         print("   4. Create credentials (API key)")
         print("   5. Add to .env file: GOOGLE_PLACES_API_KEY=your_key_here")
-        print("\n   Continue without Google Places? (y/n): ", end='')
-        if input().lower() != 'y':
-            return
+        print("\n   Continuing without Google Places (using NHS directory only)...")
     
     # Run fetcher
     clinics = fetcher.run(

@@ -106,13 +106,6 @@ npm run dev
 # Visit http://localhost:5173
 ```
 
-### Backend API (FastAPI)
-```bash
-pip install -r requirements.txt
-python run_api.py
-# API available at http://localhost:8000
-```
-
 ### Fetch Private Clinic Data
 ```bash
 python scripts/fetch_private_clinics.py

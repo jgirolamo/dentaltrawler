@@ -18,22 +18,14 @@ npm run build
 npm run preview
 ```
 
-## Environment Variables
-
-Create a `.env` file (see `.env.example`) to configure the API URL:
-
-```
-VITE_API_URL=http://localhost:8000
-```
-
 ## Features
 
 - **Search Page** (`/`) - Advanced clinic search with filters
 - **Dashboard** (`/dashboard`) - Statistics and overview of all clinics
 
-## API Integration
+## Data
 
-The frontend connects to the FastAPI backend running on port 8000. Make sure the API server is running before using the frontend.
+The app uses embedded clinic data from `src/clinics.js`. No backend server is required.
 
 ## Deployment
 
@@ -44,8 +36,7 @@ See [VERCEL_DEPLOY.md](./VERCEL_DEPLOY.md) for detailed deployment instructions.
 Quick deploy:
 1. Install Vercel CLI: `npm i -g vercel`
 2. Run `vercel` in this directory
-3. Set `VITE_API_URL` environment variable
-4. Deploy: `vercel --prod`
+3. Deploy: `vercel --prod`
 
 ### Other Platforms
 

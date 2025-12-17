@@ -16,7 +16,6 @@ Utility scripts for the Dental Trawler project.
 
 ## Main Scripts (in root)
 - **dental_trawler.py** - Main scraper script
-- **run_api.py** - Run the FastAPI backend server
 
 ## Usage
 
