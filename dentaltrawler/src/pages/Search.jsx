@@ -351,6 +351,9 @@ function Search() {
             <Link to="/dashboard" className="dashboard-link">
               📊 View Dashboard
             </Link>
+            <Link to="/error-logs" className="error-logs-link" style={{ marginLeft: '1rem', fontSize: '0.9rem', color: '#666' }}>
+              📋 Error Logs
+            </Link>
           </div>
         </div>
 
