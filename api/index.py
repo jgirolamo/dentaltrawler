@@ -109,11 +109,13 @@ def load_clinics() -> List[Dict]:
         return _data_cache
     
     try:
-        # Try multiple paths
+        # Try multiple paths - prioritize private clinics file
         paths_to_try = [
+            Path(__file__).parent.parent / "private_dental_clinics_london.json",  # New private clinics
             JSON_FILE,
             Path(__file__).parent.parent / "dental_clinics_london.json",
             Path(__file__).parent / "dental_clinics_london.json",
+            Path(__file__).parent / "private_dental_clinics_london.json",
         ]
         
         for json_path in paths_to_try:

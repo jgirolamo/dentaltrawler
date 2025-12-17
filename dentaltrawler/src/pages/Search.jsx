@@ -26,6 +26,11 @@ function Search() {
     wheelchair: false,
     parking: false
   });
+  
+  // Pagination state
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(50);
+  const MAX_RESULTS = 300;
 
   useEffect(() => {
     // Try to fetch real data first, fallback to embedded data
@@ -104,9 +109,7 @@ function Search() {
         const results = [];
         
         for (const clinic of clinicsData) {
-          // Apply filters (private clinics only)
-          if (!clinic.private) continue; // Only show private clinics
-          if (filters.private && !clinic.private) continue;
+          // Apply filters
           if (filters.emergency && !clinic.emergency) continue;
           if (filters.children && !clinic.children) continue;
           if (filters.wheelchair && !clinic.wheelchair_access) continue;
@@ -130,12 +133,14 @@ function Search() {
             if (!postcodeMatch) continue;
           }
           
-          // Text search filter
+          // Text search filter - enhanced to include area and postcode
           if (searchText) {
             const text = searchText.toLowerCase();
             const matches = 
               clinic.name?.toLowerCase().includes(text) ||
               clinic.address?.toLowerCase().includes(text) ||
+              clinic.area?.toLowerCase().includes(text) ||
+              clinic.postcode?.toLowerCase().includes(text) ||
               clinic.languages?.some(l => l.toLowerCase().includes(text)) ||
               clinic.services?.some(s => s.toLowerCase().includes(text));
             if (!matches) continue;
@@ -163,7 +168,11 @@ function Search() {
           results.sort((a, b) => (b.clinic.rating || 0) - (a.clinic.rating || 0));
         }
         
-        setResults(results);
+        // Limit results to MAX_RESULTS
+        const limitedResults = results.slice(0, MAX_RESULTS);
+        
+        setResults(limitedResults);
+        setCurrentPage(1); // Reset to first page on new search
       } catch (error) {
         console.error('Search error:', error);
         setResults([]);
@@ -204,6 +213,67 @@ function Search() {
     setMinScore(0);
     setMinRating(0);
     setSortBy('match');
+    setCurrentPage(1);
+  }
+  
+  // Pagination calculations
+  const totalResults = results.length;
+  const totalPages = Math.ceil(totalResults / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentResults = results.slice(startIndex, endIndex);
+  
+  // Handle page change
+  function handlePageChange(page) {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  
+  // Handle items per page change
+  function handleItemsPerPageChange(newItemsPerPage) {
+    setItemsPerPage(newItemsPerPage);
+    setCurrentPage(1); // Reset to first page
+  }
+  
+  // Generate page numbers for pagination
+  function getPageNumbers() {
+    const pages = [];
+    const maxVisiblePages = 5;
+    
+    if (totalPages <= maxVisiblePages) {
+      // Show all pages if total is less than max visible
+      for (let i = 1; i <= totalPages; i++) {
+        pages.push(i);
+      }
+    } else {
+      // Show first page
+      pages.push(1);
+      
+      if (currentPage > 3) {
+        pages.push('...');
+      }
+      
+      // Show pages around current page
+      const start = Math.max(2, currentPage - 1);
+      const end = Math.min(totalPages - 1, currentPage + 1);
+      
+      for (let i = start; i <= end; i++) {
+        if (!pages.includes(i)) {
+          pages.push(i);
+        }
+      }
+      
+      if (currentPage < totalPages - 2) {
+        pages.push('...');
+      }
+      
+      // Show last page
+      if (!pages.includes(totalPages)) {
+        pages.push(totalPages);
+      }
+    }
+    
+    return pages;
   }
 
   function getScoreClass(score) {
@@ -220,8 +290,8 @@ function Search() {
     <div className="search-page">
       <div className="container">
         <div className="header">
-          <h1>🔍 Dental Clinic Search</h1>
-          <p>Find the perfect dental clinic in London based on services and languages</p>
+          <h1>🔍 Private Dental Clinic Search</h1>
+          <p>Find the perfect private dental clinic in London based on services and languages</p>
           {metadata?.last_updated && (
             <small>Last updated: {new Date(metadata.last_updated).toLocaleString()}</small>
           )}
@@ -415,23 +485,40 @@ function Search() {
               <h2>Search Results</h2>
               <div className="results-stats">
                 <div className="results-count">
-                  {results.length} of {clinicsData.length} clinic{clinicsData.length !== 1 ? 's' : ''} found
+                  Showing {startIndex + 1}-{Math.min(endIndex, totalResults)} of {totalResults} 
+                  {totalResults >= MAX_RESULTS && ` (limited to ${MAX_RESULTS} max)`} clinic{totalResults !== 1 ? 's' : ''} found
                 </div>
-                <div className="progress-bar-container">
-                  <div className="progress-bar">
-                    <div 
-                      className="progress-bar-fill" 
-                      style={{ width: `${(results.length / clinicsData.length) * 100}%` }}
-                    ></div>
+                <div className="results-controls">
+                  <div className="items-per-page-selector">
+                    <label htmlFor="itemsPerPage">Show:</label>
+                    <select
+                      id="itemsPerPage"
+                      value={itemsPerPage}
+                      onChange={(e) => handleItemsPerPageChange(Number(e.target.value))}
+                      className="items-per-page-select"
+                    >
+                      <option value={25}>25</option>
+                      <option value={50}>50</option>
+                      <option value={100}>100</option>
+                    </select>
+                    <span>per page</span>
                   </div>
-                  <span className="progress-percentage">
-                    {Math.round((results.length / clinicsData.length) * 100)}%
-                  </span>
                 </div>
+              </div>
+              <div className="progress-bar-container">
+                <div className="progress-bar">
+                  <div 
+                    className="progress-bar-fill" 
+                    style={{ width: `${(totalResults / Math.min(clinicsData.length, MAX_RESULTS)) * 100}%` }}
+                  ></div>
+                </div>
+                <span className="progress-percentage">
+                  {Math.round((totalResults / Math.min(clinicsData.length, MAX_RESULTS)) * 100)}%
+                </span>
               </div>
             </div>
             <div className="results-container">
-              {results.map((result, index) => {
+              {currentResults.map((result, index) => {
                 const { clinic, match } = result;
                 const scoreClass = getScoreClass(match.score);
                 
@@ -541,6 +628,54 @@ function Search() {
                 );
               })}
             </div>
+            
+            {/* Pagination Controls */}
+            {totalPages > 1 && (
+              <div className="pagination">
+                <button
+                  className="pagination-button"
+                  onClick={() => handlePageChange(currentPage - 1)}
+                  disabled={currentPage === 1}
+                  aria-label="Previous page"
+                >
+                  ← Previous
+                </button>
+                
+                <div className="pagination-pages">
+                  {getPageNumbers().map((page, idx) => {
+                    if (page === '...') {
+                      return <span key={`ellipsis-${idx}`} className="pagination-ellipsis">...</span>;
+                    }
+                    return (
+                      <button
+                        key={page}
+                        className={`pagination-page ${currentPage === page ? 'active' : ''}`}
+                        onClick={() => handlePageChange(page)}
+                        aria-label={`Go to page ${page}`}
+                        aria-current={currentPage === page ? 'page' : undefined}
+                      >
+                        {page}
+                      </button>
+                    );
+                  })}
+                </div>
+                
+                <button
+                  className="pagination-button"
+                  onClick={() => handlePageChange(currentPage + 1)}
+                  disabled={currentPage === totalPages}
+                  aria-label="Next page"
+                >
+                  Next →
+                </button>
+              </div>
+            )}
+            
+            {totalResults >= MAX_RESULTS && (
+              <div className="results-limit-notice">
+                <p>⚠️ Results limited to {MAX_RESULTS} clinics. Refine your search to see more specific results.</p>
+              </div>
+            )}
           </div>
         )}
 
