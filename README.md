@@ -48,8 +48,8 @@ from dental_trawler import DentalServiceTrawler
 
 trawler = DentalServiceTrawler()
 clinics = trawler.run(location="London", max_clinics=50)
-trawler.save_to_json("my_results.json")
-trawler.save_to_csv("my_results.csv")
+trawler.save_to_json("data/my_results.json")
+trawler.save_to_csv("data/my_results.csv")
 ```
 
 ## Output Format
@@ -96,11 +96,41 @@ Future enhancements could include:
 3. **Legal Compliance**: Ensure you comply with websites' terms of service and robots.txt
 4. **API Alternatives**: For production use, consider using official APIs (e.g., Google Places API, NHS API)
 
+## Quick Start
+
+### Frontend (React)
+```bash
+cd dentaltrawler
+npm install
+npm run dev
+# Visit http://localhost:5173
+```
+
+### Backend API (FastAPI)
+```bash
+pip install -r requirements.txt
+python run_api.py
+# API available at http://localhost:8000
+```
+
+### Fetch Private Clinic Data
+```bash
+python scripts/fetch_private_clinics.py
+```
+
+## Documentation
+
+See the `docs/` directory for detailed guides:
+- **docs/DEPLOYMENT.md** - Deployment instructions
+- **docs/GET_PRIVATE_CLINICS.md** - Getting private clinic data
+- **docs/LOCAL_DEBUG.md** - Local debugging guide
+
 ## Troubleshooting
 
 - If scraping fails, websites may have changed their structure
 - Some websites may block automated requests
 - Consider using official APIs for more reliable data access
+- See `docs/` for troubleshooting guides
 
 ## License
 

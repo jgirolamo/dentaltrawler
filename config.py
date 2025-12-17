@@ -30,7 +30,7 @@ LANGUAGE_KEYWORDS = [
     'farsi', 'persian', 'hebrew', 'thai', 'vietnamese', 'tagalog'
 ]
 
-# Output file names
-OUTPUT_JSON = "dental_clinics_london.json"
-OUTPUT_CSV = "dental_clinics_london.csv"
+# Output file names (saved to data/ directory)
+OUTPUT_JSON = "data/dental_clinics_london.json"
+OUTPUT_CSV = "data/dental_clinics_london.csv"
 

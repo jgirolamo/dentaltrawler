@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>London Private Dental Clinics - All Results</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .stats {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        .search-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        #searchInput {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 4px;
+        }
+        #searchInput:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+        .results {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+        .clinic-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .clinic-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .clinic-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .clinic-info {
+            color: #7f8c8d;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        .clinic-info strong {
+            color: #34495e;
+        }
+        .services, .languages {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #ecf0f1;
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+        .tag {
+            background: #3498db;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+        .tag.language {
+            background: #9b59b6;
+        }
+        .tag.feature {
+            background: #27ae60;
+        }
+        .rating {
+            color: #f39c12;
+            font-weight: bold;
+        }
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔍 London Private Dental Clinics</h1>
+            <div class="stats">
+                <span id="totalCount">6</span> clinics found
+            </div>
+        </header>
+        
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search by name, address, postcode, service, or language...">
+        </div>
+        
+        <div class="results" id="results">
+
+            <div class="clinic-card" data-name="bupa dental care - oxford street" 
+                 data-address="250 oxford street, london w1c 1dh" 
+                 data-postcode="w1c 1dh"
+                 data-services="general dentistry cosmetic dentistry teeth whitening dental implants"
+                 data-languages="english">
+                <div class="clinic-name">Bupa Dental Care - Oxford Street</div>
+                <div class="clinic-info"><strong>📍</strong> 250 Oxford Street, London W1C 1DH</div>
+                <div class="clinic-info"><strong>📞</strong> 020 7636 5678</div>
+                <div class="clinic-info"><strong>📮</strong> W1C 1DH</div>
+                <div class="clinic-info rating">⭐ 4.5/5.0</div>
+                <div class="services">
+                    <strong>Services:</strong>
+                    <div class="tags"><span class="tag">General Dentistry</span><span class="tag">Cosmetic Dentistry</span><span class="tag">Teeth Whitening</span><span class="tag">Dental Implants</span></div>
+                </div>
+                <div class="languages">
+                    <strong>Languages:</strong>
+                    <div class="tags"><span class="tag language">English</span></div>
+                </div>
+                <div class="tags" style="margin-top: 10px;"><span class="tag feature">Emergency</span><span class="tag feature">Children</span><span class="tag feature">Wheelchair Access</span></div>
+            </div>
+
+            <div class="clinic-card" data-name="portman dental care - islington" 
+                 data-address="45 upper street, london n1 0pn" 
+                 data-postcode="n1 0pn"
+                 data-services="general dentistry cosmetic dentistry teeth whitening invisalign"
+                 data-languages="english french">
+                <div class="clinic-name">Portman Dental Care - Islington</div>
+                <div class="clinic-info"><strong>📍</strong> 45 Upper Street, London N1 0PN</div>
+                <div class="clinic-info"><strong>📞</strong> 020 7359 4567</div>
+                <div class="clinic-info"><strong>📮</strong> N1 0PN</div>
+                <div class="clinic-info rating">⭐ 4.7/5.0</div>
+                <div class="services">
+                    <strong>Services:</strong>
+                    <div class="tags"><span class="tag">General Dentistry</span><span class="tag">Cosmetic Dentistry</span><span class="tag">Teeth Whitening</span><span class="tag">Invisalign</span></div>
+                </div>
+                <div class="languages">
+                    <strong>Languages:</strong>
+                    <div class="tags"><span class="tag language">English</span><span class="tag language">French</span></div>
+                </div>
+                <div class="tags" style="margin-top: 10px;"><span class="tag feature">Children</span><span class="tag feature">Wheelchair Access</span></div>
+            </div>
+
+            <div class="clinic-card" data-name="smile dental practice - nw6" 
+                 data-address="156 kilburn high road, london nw6 4jd" 
+                 data-postcode="nw6 4jd"
+                 data-services="general dentistry orthodontics teeth whitening root canal"
+                 data-languages="english portuguese spanish">
+                <div class="clinic-name">Smile Dental Practice - NW6</div>
+                <div class="clinic-info"><strong>📍</strong> 156 Kilburn High Road, London NW6 4JD</div>
+                <div class="clinic-info"><strong>📞</strong> 020 7624 5678</div>
+                <div class="clinic-info"><strong>📮</strong> NW6 4JD</div>
+                <div class="clinic-info rating">⭐ 4.6/5.0</div>
+                <div class="services">
+                    <strong>Services:</strong>
+                    <div class="tags"><span class="tag">General Dentistry</span><span class="tag">Orthodontics</span><span class="tag">Teeth Whitening</span><span class="tag">Root Canal</span></div>
+                </div>
+                <div class="languages">
+                    <strong>Languages:</strong>
+                    <div class="tags"><span class="tag language">English</span><span class="tag language">Portuguese</span><span class="tag language">Spanish</span></div>
+                </div>
+                <div class="tags" style="margin-top: 10px;"><span class="tag feature">Emergency</span><span class="tag feature">Children</span></div>
+            </div>
+
+            <div class="clinic-card" data-name="kensington dental practice" 
+                 data-address="156 kensington high street, london w8 6sh" 
+                 data-postcode="w8 6sh"
+                 data-services="general dentistry dental implants cosmetic dentistry teeth whitening orthodontics"
+                 data-languages="english french italian">
+                <div class="clinic-name">Kensington Dental Practice</div>
+                <div class="clinic-info"><strong>📍</strong> 156 Kensington High Street, London W8 6SH</div>
+                <div class="clinic-info"><strong>📞</strong> 020 7937 5678</div>
+                <div class="clinic-info"><strong>📮</strong> W8 6SH</div>
+                <div class="clinic-info rating">⭐ 4.9/5.0</div>
+                <div class="services">
+                    <strong>Services:</strong>
+                    <div class="tags"><span class="tag">General Dentistry</span><span class="tag">Dental Implants</span><span class="tag">Cosmetic Dentistry</span><span class="tag">Teeth Whitening</span><span class="tag">Orthodontics</span></div>
+                </div>
+                <div class="languages">
+                    <strong>Languages:</strong>
+                    <div class="tags"><span class="tag language">English</span><span class="tag language">French</span><span class="tag language">Italian</span></div>
+                </div>
+                <div class="tags" style="margin-top: 10px;"><span class="tag feature">Emergency</span><span class="tag feature">Children</span><span class="tag feature">Wheelchair Access</span></div>
+            </div>
+
+            <div class="clinic-card" data-name="harley street dental studio" 
+                 data-address="78 harley street, london w1g 7hj" 
+                 data-postcode="w1g 7hj"
+                 data-services="cosmetic dentistry dental implants teeth whitening veneers invisalign"
+                 data-languages="english arabic french">
+                <div class="clinic-name">Harley Street Dental Studio</div>
+                <div class="clinic-info"><strong>📍</strong> 78 Harley Street, London W1G 7HJ</div>
+                <div class="clinic-info"><strong>📞</strong> 020 7935 1234</div>
+                <div class="clinic-info"><strong>📮</strong> W1G 7HJ</div>
+                <div class="clinic-info rating">⭐ 4.8/5.0</div>
+                <div class="services">
+                    <strong>Services:</strong>
+                    <div class="tags"><span class="tag">Cosmetic Dentistry</span><span class="tag">Dental Implants</span><span class="tag">Teeth Whitening</span><span class="tag">Veneers</span><span class="tag">Invisalign</span></div>
+                </div>
+                <div class="languages">
+                    <strong>Languages:</strong>
+                    <div class="tags"><span class="tag language">English</span><span class="tag language">Arabic</span><span class="tag language">French</span></div>
+                </div>
+                <div class="tags" style="margin-top: 10px;"><span class="tag feature">Wheelchair Access</span></div>
+            </div>
+
+            <div class="clinic-card" data-name="chelsea smiles" 
+                 data-address="123 king's road, london sw3 4rd" 
+                 data-postcode="sw3 4rd"
+                 data-services="cosmetic dentistry teeth whitening general dentistry orthodontics"
+                 data-languages="english spanish italian">
+                <div class="clinic-name">Chelsea Smiles</div>
+                <div class="clinic-info"><strong>📍</strong> 123 King's Road, London SW3 4RD</div>
+                <div class="clinic-info"><strong>📞</strong> 020 7352 5678</div>
+                <div class="clinic-info"><strong>📮</strong> SW3 4RD</div>
+                <div class="clinic-info rating">⭐ 4.6/5.0</div>
+                <div class="services">
+                    <strong>Services:</strong>
+                    <div class="tags"><span class="tag">Cosmetic Dentistry</span><span class="tag">Teeth Whitening</span><span class="tag">General Dentistry</span><span class="tag">Orthodontics</span></div>
+                </div>
+                <div class="languages">
+                    <strong>Languages:</strong>
+                    <div class="tags"><span class="tag language">English</span><span class="tag language">Spanish</span><span class="tag language">Italian</span></div>
+                </div>
+                <div class="tags" style="margin-top: 10px;"><span class="tag feature">Children</span><span class="tag feature">Wheelchair Access</span></div>
+            </div>
+
+        </div>
+    </div>
+    
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const results = document.getElementById('results');
+        const totalCount = document.getElementById('totalCount');
+        const cards = document.querySelectorAll('.clinic-card');
+        
+        function filterResults() {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            let visibleCount = 0;
+            
+            cards.forEach(card => {
+                const name = card.dataset.name || '';
+                const address = card.dataset.address || '';
+                const postcode = card.dataset.postcode || '';
+                const services = card.dataset.services || '';
+                const languages = card.dataset.languages || '';
+                
+                const matches = !searchTerm || 
+                    name.includes(searchTerm) ||
+                    address.includes(searchTerm) ||
+                    postcode.includes(searchTerm) ||
+                    services.includes(searchTerm) ||
+                    languages.includes(searchTerm);
+                
+                if (matches) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            totalCount.textContent = visibleCount;
+            
+            // Show no results message if needed
+            let noResults = results.querySelector('.no-results');
+            if (visibleCount === 0 && searchTerm) {
+                if (!noResults) {
+                    noResults = document.createElement('div');
+                    noResults.className = 'no-results';
+                    noResults.textContent = 'No clinics found matching your search.';
+                    results.appendChild(noResults);
+                }
+            } else if (noResults) {
+                noResults.remove();
+            }
+        }
+        
+        searchInput.addEventListener('input', filterResults);
+    </script>
+</body>
+</html>

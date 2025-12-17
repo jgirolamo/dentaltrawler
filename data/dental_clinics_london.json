@@ -1,0 +1,1492 @@
+[
+  {
+    "name": "Dental Clinic - Westminster",
+    "address": "186 Victoria Street, London N2 2PG",
+    "phone": "020 7372 6097",
+    "link": "https://example-dental-1.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Teeth Whitening",
+      "Pediatric",
+      "General Dentistry",
+      "Endodontics",
+      "Invisalign"
+    ],
+    "languages": [
+      "English",
+      "Hindi"
+    ],
+    "area": "Westminster",
+    "postcode": "N2",
+    "nhs": true,
+    "private": false,
+    "emergency": true,
+    "children": false,
+    "wheelchair_access": true,
+    "parking": true,
+    "rating": 3.7,
+    "opening_hours": "Mon-Fri: 7am-8pm, Sat: 9am-4pm"
+  },
+  {
+    "name": "Dental Centre - Southwark",
+    "address": "130 London Road, London SE5 3DL",
+    "phone": "020 7464 5060",
+    "link": "https://example-dental-2.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Teeth Whitening",
+      "Pediatric",
+      "Veneers",
+      "Periodontics",
+      "Root Canal",
+      "Implants"
+    ],
+    "languages": [
+      "English",
+      "German",
+      "Punjabi",
+      "Korean"
+    ],
+    "area": "Southwark",
+    "postcode": "SE5",
+    "nhs": true,
+    "private": true,
+    "emergency": true,
+    "children": true,
+    "wheelchair_access": false,
+    "parking": true,
+    "rating": 4.5,
+    "opening_hours": "Mon-Thu: 8am-7pm, Fri: 8am-5pm"
+  },
+  {
+    "name": "Perfect Smile - Waltham Forest",
+    "address": "184 Queen Street, London E10 4TO",
+    "phone": "020 7424 9513",
+    "link": "https://example-dental-3.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Check-Up",
+      "Wisdom Teeth",
+      "Dental X-Ray",
+      "Bridge",
+      "Pediatric",
+      "Children",
+      "Restorative"
+    ],
+    "languages": [
+      "English",
+      "Chinese",
+      "Arabic",
+      "Greek"
+    ],
+    "area": "Waltham Forest",
+    "postcode": "E10",
+    "nhs": true,
+    "private": true,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": true,
+    "rating": 4.4,
+    "opening_hours": "Mon-Fri: 9am-7pm, Sat: 9am-5pm"
+  },
+  {
+    "name": "Premier Dental - Enfield",
+    "address": "49 Main Road, London E1 1IP",
+    "phone": "020 7117 3699",
+    "link": "https://example-dental-4.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Oral Surgery",
+      "Invisalign",
+      "Root Canal",
+      "Teeth Whitening"
+    ],
+    "languages": [
+      "English",
+      "Bengali"
+    ],
+    "area": "Enfield",
+    "postcode": "E1",
+    "nhs": true,
+    "private": false,
+    "emergency": false,
+    "children": true,
+    "wheelchair_access": true,
+    "parking": true,
+    "rating": 4.4,
+    "opening_hours": "Mon-Fri: 9am-5pm, Sat: 10am-2pm"
+  },
+  {
+    "name": "Dental Studio - Wandsworth",
+    "address": "283 Regent Street, London SE5 5VH",
+    "phone": "020 7033 8941",
+    "link": "https://example-dental-5.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Veneers",
+      "Oral Surgery",
+      "Bridge",
+      "Prosthodontics",
+      "Gum Treatment",
+      "Scale and Polish",
+      "Implants",
+      "Dentures"
+    ],
+    "languages": [
+      "English",
+      "Mandarin"
+    ],
+    "area": "Wandsworth",
+    "postcode": "SE5",
+    "nhs": true,
+    "private": false,
+    "emergency": false,
+    "children": true,
+    "wheelchair_access": true,
+    "parking": true,
+    "rating": 4.1,
+    "opening_hours": "Mon-Wed: 8am-6pm, Thu-Fri: 8am-7pm, Sat: 9am-3pm"
+  },
+  {
+    "name": "Dental Clinic - Hounslow",
+    "address": "263 Park Road, London SE1 8JM",
+    "phone": "020 7694 4496",
+    "link": "https://example-dental-6.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Dentures",
+      "Gum Treatment",
+      "Implants"
+    ],
+    "languages": [
+      "English",
+      "Dutch"
+    ],
+    "area": "Hounslow",
+    "postcode": "SE1",
+    "nhs": false,
+    "private": true,
+    "emergency": false,
+    "children": true,
+    "wheelchair_access": true,
+    "parking": false,
+    "rating": 3.7,
+    "opening_hours": "Mon-Fri: 9am-5pm, Sat: 10am-2pm"
+  },
+  {
+    "name": "Dental Clinic - Tower Hamlets",
+    "address": "254 Market Street, London NW5 3LY",
+    "phone": "020 7120 6197",
+    "link": "https://example-dental-7.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Cleaning",
+      "Cosmetic Dentistry",
+      "Wisdom Teeth",
+      "Periodontics",
+      "Orthodontics",
+      "Fillings"
+    ],
+    "languages": [
+      "English",
+      "Urdu"
+    ],
+    "area": "Tower Hamlets",
+    "postcode": "NW5",
+    "nhs": true,
+    "private": false,
+    "emergency": true,
+    "children": true,
+    "wheelchair_access": true,
+    "parking": true,
+    "rating": 4.2,
+    "opening_hours": "Mon-Fri: 8am-5pm, Sat: 9am-1pm"
+  },
+  {
+    "name": "Modern Dental - Fulham",
+    "address": "20 Queen Street, London SW2 1MZ",
+    "phone": "020 7196 6301",
+    "link": "https://example-dental-8.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Crown",
+      "Implants",
+      "Scale and Polish",
+      "Emergency",
+      "Veneers",
+      "Prosthodontics",
+      "Cleaning"
+    ],
+    "languages": [
+      "English",
+      "Vietnamese"
+    ],
+    "area": "Fulham",
+    "postcode": "SW2",
+    "nhs": false,
+    "private": true,
+    "emergency": true,
+    "children": true,
+    "wheelchair_access": false,
+    "parking": true,
+    "rating": 4.7,
+    "opening_hours": "Mon-Wed: 8am-6pm, Thu-Fri: 8am-7pm, Sat: 9am-3pm"
+  },
+  {
+    "name": "Dental Practice - Sutton",
+    "address": "221 Regent Street, London EC3 2XG",
+    "phone": "020 7295 7386",
+    "link": "https://example-dental-9.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Root Canal",
+      "Crown",
+      "Oral Surgery"
+    ],
+    "languages": [
+      "English",
+      "French",
+      "Cantonese",
+      "Korean",
+      "Portuguese"
+    ],
+    "area": "Sutton",
+    "postcode": "EC3",
+    "nhs": true,
+    "private": false,
+    "emergency": false,
+    "children": true,
+    "wheelchair_access": true,
+    "parking": false,
+    "rating": 3.9,
+    "opening_hours": "Mon-Fri: 9am-5pm, Sat: 10am-2pm"
+  },
+  {
+    "name": "Smile Dental - Fulham",
+    "address": "64 Station Road, London E4 1TG",
+    "phone": "020 7275 4624",
+    "link": "https://example-dental-10.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Restorative",
+      "Teeth Whitening",
+      "Crown",
+      "Veneers"
+    ],
+    "languages": [
+      "English",
+      "Greek",
+      "Korean",
+      "Swedish",
+      "Chinese"
+    ],
+    "area": "Fulham",
+    "postcode": "E4",
+    "nhs": false,
+    "private": true,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": true,
+    "parking": false,
+    "rating": 4.7,
+    "opening_hours": "Mon-Thu: 8am-7pm, Fri: 8am-5pm"
+  },
+  {
+    "name": "Bright Smile - Harrow",
+    "address": "6 Regent Street, London N1 4GF",
+    "phone": "020 7426 7533",
+    "link": "https://example-dental-11.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Veneers",
+      "Dental X-Ray",
+      "Implants",
+      "Extraction"
+    ],
+    "languages": [
+      "English",
+      "Turkish"
+    ],
+    "area": "Harrow",
+    "postcode": "N1",
+    "nhs": true,
+    "private": true,
+    "emergency": true,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": true,
+    "rating": 3.6,
+    "opening_hours": "Mon-Fri: 9am-6pm, Sat: 9am-1pm"
+  },
+  {
+    "name": "Dental Practice - Newham",
+    "address": "72 Oxford Street, London N2 2UD",
+    "phone": "020 7615 5020",
+    "link": "https://example-dental-12.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Braces",
+      "Check-Up",
+      "Preventive",
+      "Oral Surgery",
+      "Restorative",
+      "Veneers",
+      "Scale and Polish",
+      "Root Canal"
+    ],
+    "languages": [
+      "English",
+      "Spanish",
+      "Russian",
+      "Swedish"
+    ],
+    "area": "Newham",
+    "postcode": "N2",
+    "nhs": true,
+    "private": false,
+    "emergency": true,
+    "children": true,
+    "wheelchair_access": true,
+    "parking": false,
+    "rating": 4.6,
+    "opening_hours": "Mon-Wed: 8am-6pm, Thu-Fri: 8am-7pm, Sat: 9am-3pm"
+  },
+  {
+    "name": "Elite Dental - Tower Hamlets",
+    "address": "213 Bond Street, London W2 6AR",
+    "phone": "020 7909 8052",
+    "link": "https://example-dental-13.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Teeth Whitening",
+      "Endodontics",
+      "Cosmetic Dentistry",
+      "Wisdom Teeth",
+      "Implants",
+      "Fillings",
+      "Periodontics"
+    ],
+    "languages": [
+      "English",
+      "Swedish"
+    ],
+    "area": "Tower Hamlets",
+    "postcode": "W2",
+    "nhs": false,
+    "private": true,
+    "emergency": true,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": true,
+    "rating": 4.8,
+    "opening_hours": "Mon-Fri: 8am-5pm, Sat: 9am-1pm"
+  },
+  {
+    "name": "Smile Dental - Wandsworth",
+    "address": "221 Station Road, London EC4 5SN",
+    "phone": "020 7180 4514",
+    "link": "https://example-dental-14.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Braces",
+      "Gum Treatment",
+      "Veneers",
+      "Crown",
+      "Emergency",
+      "Scale and Polish",
+      "Prosthodontics"
+    ],
+    "languages": [
+      "English",
+      "Romanian",
+      "Norwegian",
+      "Mandarin"
+    ],
+    "area": "Wandsworth",
+    "postcode": "EC4",
+    "nhs": false,
+    "private": true,
+    "emergency": true,
+    "children": true,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": 4.6,
+    "opening_hours": "Mon-Fri: 9am-5pm, Sat: 10am-2pm"
+  },
+  {
+    "name": "Bright Smile - Fulham",
+    "address": "283 Main Road, London N3 1DF",
+    "phone": "020 7914 9142",
+    "link": "https://example-dental-15.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Bridge",
+      "Cleaning",
+      "Scale and Polish",
+      "Root Canal",
+      "Implants",
+      "Dental X-Ray",
+      "Crown",
+      "Extraction"
+    ],
+    "languages": [
+      "English",
+      "Italian",
+      "Bengali",
+      "Korean"
+    ],
+    "area": "Fulham",
+    "postcode": "N3",
+    "nhs": false,
+    "private": true,
+    "emergency": true,
+    "children": false,
+    "wheelchair_access": true,
+    "parking": false,
+    "rating": 4.9,
+    "opening_hours": "Mon-Wed: 8am-6pm, Thu-Fri: 8am-7pm, Sat: 9am-3pm"
+  },
+  {
+    "name": "Modern Dental - Richmond",
+    "address": "247 Queen Street, London SW1 8ZA",
+    "phone": "020 7755 6610",
+    "link": "https://example-dental-16.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Orthodontics",
+      "Endodontics",
+      "Dental Hygiene",
+      "Braces"
+    ],
+    "languages": [
+      "English",
+      "Thai",
+      "Hindi"
+    ],
+    "area": "Richmond",
+    "postcode": "SW1",
+    "nhs": true,
+    "private": false,
+    "emergency": false,
+    "children": true,
+    "wheelchair_access": false,
+    "parking": true,
+    "rating": 3.7,
+    "opening_hours": "Mon-Fri: 9am-6pm"
+  },
+  {
+    "name": "Dental Centre - Lewisham",
+    "address": "255 Church Street, London W8 5TJ",
+    "phone": "020 7060 4636",
+    "link": "https://example-dental-17.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Scale and Polish",
+      "Invisalign",
+      "General Dentistry",
+      "Check-Up"
+    ],
+    "languages": [
+      "English",
+      "Urdu",
+      "Cantonese",
+      "French"
+    ],
+    "area": "Lewisham",
+    "postcode": "W8",
+    "nhs": false,
+    "private": true,
+    "emergency": true,
+    "children": true,
+    "wheelchair_access": false,
+    "parking": true,
+    "rating": 4.2,
+    "opening_hours": "Mon-Fri: 8am-6pm"
+  },
+  {
+    "name": "Bright Smile - Kingston",
+    "address": "33 Church Street, London N2 6KC",
+    "phone": "020 7146 7417",
+    "link": "https://example-dental-18.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Root Canal",
+      "Cleaning",
+      "General Dentistry",
+      "Check-Up",
+      "Children",
+      "Teeth Whitening",
+      "Cosmetic Dentistry",
+      "Braces"
+    ],
+    "languages": [
+      "English",
+      "Punjabi"
+    ],
+    "area": "Kingston",
+    "postcode": "N2",
+    "nhs": false,
+    "private": true,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": true,
+    "parking": true,
+    "rating": 4.5,
+    "opening_hours": "Mon-Fri: 9am-6pm"
+  },
+  {
+    "name": "Elite Dental - Islington",
+    "address": "238 Main Road, London E4 4AP",
+    "phone": "020 7835 8230",
+    "link": "https://example-dental-19.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Teeth Whitening",
+      "Endodontics",
+      "Oral Surgery",
+      "Bridge",
+      "Invisalign",
+      "Check-Up"
+    ],
+    "languages": [
+      "English",
+      "Arabic"
+    ],
+    "area": "Islington",
+    "postcode": "E4",
+    "nhs": true,
+    "private": true,
+    "emergency": false,
+    "children": true,
+    "wheelchair_access": false,
+    "parking": true,
+    "rating": 3.5,
+    "opening_hours": "Mon-Fri: 7am-8pm, Sat: 9am-4pm"
+  },
+  {
+    "name": "Dental Clinic - Westminster",
+    "address": "34 Queen Street, London E8 5NG",
+    "phone": "020 7464 2345",
+    "link": "https://example-dental-20.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Check-Up",
+      "Braces",
+      "Veneers"
+    ],
+    "languages": [
+      "English",
+      "Korean"
+    ],
+    "area": "Westminster",
+    "postcode": "E8",
+    "nhs": false,
+    "private": true,
+    "emergency": false,
+    "children": true,
+    "wheelchair_access": true,
+    "parking": false,
+    "rating": 4.4,
+    "opening_hours": "Mon-Wed: 8am-6pm, Thu-Fri: 8am-7pm, Sat: 9am-3pm"
+  },
+  {
+    "name": "Family Dental - Haringey",
+    "address": "106 High Street, London NW8 8CW",
+    "phone": "020 7702 1636",
+    "link": "https://example-dental-21.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Cleaning",
+      "Dental Hygiene",
+      "General Dentistry",
+      "Oral Health",
+      "Scale and Polish",
+      "Emergency"
+    ],
+    "languages": [
+      "English",
+      "Russian",
+      "Norwegian",
+      "Arabic"
+    ],
+    "area": "Haringey",
+    "postcode": "NW8",
+    "nhs": true,
+    "private": true,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": true,
+    "rating": 4.4,
+    "opening_hours": "Mon-Fri: 8am-6pm"
+  },
+  {
+    "name": "Healthy Teeth - Bromley",
+    "address": "295 King Street, London N9 9TK",
+    "phone": "020 7765 2330",
+    "link": "https://example-dental-22.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Scale and Polish",
+      "Preventive",
+      "General Dentistry",
+      "Bridge",
+      "Dental Hygiene",
+      "Braces",
+      "Dental X-Ray"
+    ],
+    "languages": [
+      "English",
+      "Bengali",
+      "French",
+      "Spanish"
+    ],
+    "area": "Bromley",
+    "postcode": "N9",
+    "nhs": true,
+    "private": true,
+    "emergency": true,
+    "children": true,
+    "wheelchair_access": true,
+    "parking": false,
+    "rating": 3.7,
+    "opening_hours": "Mon-Fri: 9am-6pm"
+  },
+  {
+    "name": "Advanced Dental - Croydon",
+    "address": "185 Station Road, London NW9 1OE",
+    "phone": "020 7105 6379",
+    "link": "https://example-dental-23.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Cosmetic Dentistry",
+      "Dental Hygiene",
+      "General Dentistry",
+      "Cleaning",
+      "Wisdom Teeth"
+    ],
+    "languages": [
+      "English",
+      "Chinese"
+    ],
+    "area": "Croydon",
+    "postcode": "NW9",
+    "nhs": true,
+    "private": true,
+    "emergency": true,
+    "children": true,
+    "wheelchair_access": false,
+    "parking": true,
+    "rating": 3.9,
+    "opening_hours": "Mon-Thu: 8am-7pm, Fri: 8am-5pm"
+  },
+  {
+    "name": "Elite Dental - Chelsea",
+    "address": "267 Baker Street, London N8 1HC",
+    "phone": "020 7641 1884",
+    "link": "https://example-dental-24.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Teeth Whitening",
+      "Periodontics",
+      "Extraction"
+    ],
+    "languages": [
+      "English",
+      "Spanish",
+      "Polish"
+    ],
+    "area": "Chelsea",
+    "postcode": "N8",
+    "nhs": true,
+    "private": false,
+    "emergency": false,
+    "children": true,
+    "wheelchair_access": true,
+    "parking": true,
+    "rating": 4.7,
+    "opening_hours": "Mon-Fri: 7am-8pm, Sat: 9am-4pm"
+  },
+  {
+    "name": "Dental Studio - Bexley",
+    "address": "122 Market Street, London NW5 5FP",
+    "phone": "020 7948 3781",
+    "link": "https://example-dental-25.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Preventive",
+      "Pediatric",
+      "Endodontics",
+      "Bridge",
+      "Gum Treatment",
+      "Veneers",
+      "Fillings"
+    ],
+    "languages": [
+      "English",
+      "Mandarin",
+      "Hindi",
+      "French"
+    ],
+    "area": "Bexley",
+    "postcode": "NW5",
+    "nhs": true,
+    "private": false,
+    "emergency": true,
+    "children": true,
+    "wheelchair_access": true,
+    "parking": true,
+    "rating": 4.8,
+    "opening_hours": "Mon-Fri: 9am-5pm, Sat: 10am-2pm"
+  },
+  {
+    "name": "Dental Care - Redbridge",
+    "address": "163 Church Street, London N7 8CU",
+    "phone": "020 7722 4261",
+    "link": "https://example-dental-26.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Restorative",
+      "General Dentistry",
+      "Root Canal",
+      "Preventive",
+      "Endodontics"
+    ],
+    "languages": [
+      "English",
+      "Vietnamese"
+    ],
+    "area": "Redbridge",
+    "postcode": "N7",
+    "nhs": true,
+    "private": true,
+    "emergency": false,
+    "children": true,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": 4.7,
+    "opening_hours": "Mon-Fri: 7am-7pm"
+  },
+  {
+    "name": "Smile Dental - Southwark",
+    "address": "169 Station Road, London W10 4BN",
+    "phone": "020 7178 1377",
+    "link": "https://example-dental-27.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Orthodontics",
+      "Veneers",
+      "Scale and Polish",
+      "Teeth Whitening",
+      "Oral Surgery",
+      "Extraction"
+    ],
+    "languages": [
+      "English",
+      "Russian",
+      "Polish"
+    ],
+    "area": "Southwark",
+    "postcode": "W10",
+    "nhs": true,
+    "private": true,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": true,
+    "parking": true,
+    "rating": 3.9,
+    "opening_hours": "Mon-Thu: 8am-7pm, Fri: 8am-5pm"
+  },
+  {
+    "name": "Comprehensive Dental - Barking",
+    "address": "115 Park Road, London NW10 4LC",
+    "phone": "020 7804 8121",
+    "link": "https://example-dental-28.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Braces",
+      "Emergency",
+      "Children",
+      "Teeth Whitening",
+      "Orthodontics"
+    ],
+    "languages": [
+      "English",
+      "Chinese"
+    ],
+    "area": "Barking",
+    "postcode": "NW10",
+    "nhs": true,
+    "private": true,
+    "emergency": false,
+    "children": true,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": 4.0,
+    "opening_hours": "Mon-Fri: 8am-5pm, Sat: 9am-1pm"
+  },
+  {
+    "name": "Family Dental - Croydon",
+    "address": "275 Victoria Street, London SE9 7HW",
+    "phone": "020 7843 7887",
+    "link": "https://example-dental-29.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Oral Surgery",
+      "Dental X-Ray",
+      "Prosthodontics",
+      "Endodontics",
+      "Root Canal",
+      "Braces"
+    ],
+    "languages": [
+      "English",
+      "Arabic"
+    ],
+    "area": "Croydon",
+    "postcode": "SE9",
+    "nhs": false,
+    "private": true,
+    "emergency": true,
+    "children": false,
+    "wheelchair_access": true,
+    "parking": true,
+    "rating": 4.1,
+    "opening_hours": "Mon-Fri: 9am-6pm"
+  },
+  {
+    "name": "Dental Practice - Barnet",
+    "address": "29 Oxford Street, London E7 5CB",
+    "phone": "020 7637 9440",
+    "link": "https://example-dental-30.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Oral Health",
+      "Braces",
+      "Cosmetic Dentistry",
+      "Extraction",
+      "Teeth Whitening",
+      "Periodontics"
+    ],
+    "languages": [
+      "English",
+      "Hindi",
+      "Swedish",
+      "Dutch",
+      "Korean"
+    ],
+    "area": "Barnet",
+    "postcode": "E7",
+    "nhs": true,
+    "private": true,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": true,
+    "rating": 4.9,
+    "opening_hours": "Mon-Fri: 9am-7pm, Sat: 9am-5pm"
+  },
+  {
+    "name": "Advanced Dental - Ealing",
+    "address": "138 Oxford Street, London N10 1FZ",
+    "phone": "020 7218 5376",
+    "link": "https://example-dental-31.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Scale and Polish",
+      "Bridge",
+      "Gum Treatment",
+      "Restorative",
+      "Veneers"
+    ],
+    "languages": [
+      "English",
+      "Portuguese"
+    ],
+    "area": "Ealing",
+    "postcode": "N10",
+    "nhs": true,
+    "private": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": true,
+    "parking": true,
+    "rating": 4.6,
+    "opening_hours": "Mon-Fri: 7am-8pm, Sat: 9am-4pm"
+  },
+  {
+    "name": "Dental Clinic - Chelsea",
+    "address": "87 Oxford Street, London N6 2UR",
+    "phone": "020 7329 6207",
+    "link": "https://example-dental-32.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Restorative",
+      "Emergency",
+      "Oral Surgery",
+      "Braces",
+      "Prosthodontics",
+      "Cosmetic Dentistry"
+    ],
+    "languages": [
+      "English",
+      "Romanian",
+      "Norwegian",
+      "Vietnamese"
+    ],
+    "area": "Chelsea",
+    "postcode": "N6",
+    "nhs": true,
+    "private": false,
+    "emergency": true,
+    "children": true,
+    "wheelchair_access": false,
+    "parking": true,
+    "rating": 4.8,
+    "opening_hours": "Mon-Fri: 7am-8pm, Sat: 9am-4pm"
+  },
+  {
+    "name": "Dental Studio - Merton",
+    "address": "34 Regent Street, London NW10 1ED",
+    "phone": "020 7990 4629",
+    "link": "https://example-dental-33.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Invisalign",
+      "Fillings",
+      "Gum Treatment",
+      "Wisdom Teeth"
+    ],
+    "languages": [
+      "English",
+      "Polish",
+      "German",
+      "Romanian",
+      "Thai"
+    ],
+    "area": "Merton",
+    "postcode": "NW10",
+    "nhs": true,
+    "private": true,
+    "emergency": true,
+    "children": true,
+    "wheelchair_access": true,
+    "parking": false,
+    "rating": 4.0,
+    "opening_hours": "Mon-Fri: 9am-6pm, Sat: 9am-1pm"
+  },
+  {
+    "name": "Healthy Teeth - Bexley",
+    "address": "95 Market Street, London N3 1FA",
+    "phone": "020 7573 7835",
+    "link": "https://example-dental-34.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Dental Hygiene",
+      "Check-Up",
+      "Orthodontics",
+      "Braces",
+      "Emergency",
+      "Dentures",
+      "Pediatric",
+      "Preventive"
+    ],
+    "languages": [
+      "English",
+      "Punjabi"
+    ],
+    "area": "Bexley",
+    "postcode": "N3",
+    "nhs": true,
+    "private": true,
+    "emergency": true,
+    "children": true,
+    "wheelchair_access": true,
+    "parking": false,
+    "rating": 5.0,
+    "opening_hours": "Mon-Fri: 7am-7pm"
+  },
+  {
+    "name": "Elite Dental - Islington",
+    "address": "3 Bridge Street, London SW5 6QY",
+    "phone": "020 7998 5210",
+    "link": "https://example-dental-35.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Oral Health",
+      "Restorative",
+      "Invisalign",
+      "Fillings",
+      "Endodontics",
+      "Orthodontics",
+      "Dental Hygiene"
+    ],
+    "languages": [
+      "English",
+      "Korean",
+      "Farsi",
+      "Romanian"
+    ],
+    "area": "Islington",
+    "postcode": "SW5",
+    "nhs": false,
+    "private": true,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": true,
+    "parking": false,
+    "rating": 4.9,
+    "opening_hours": "Mon-Fri: 9am-6pm, Sat: 9am-1pm"
+  },
+  {
+    "name": "Family Dental - Chelsea",
+    "address": "92 London Road, London N3 7NX",
+    "phone": "020 7418 6190",
+    "link": "https://example-dental-36.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Dental X-Ray",
+      "Prosthodontics",
+      "Cleaning",
+      "Teeth Whitening",
+      "Endodontics",
+      "Oral Health",
+      "Implants"
+    ],
+    "languages": [
+      "English",
+      "Thai"
+    ],
+    "area": "Chelsea",
+    "postcode": "N3",
+    "nhs": false,
+    "private": true,
+    "emergency": true,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": 4.9,
+    "opening_hours": "Mon-Wed: 8am-6pm, Thu-Fri: 8am-7pm, Sat: 9am-3pm"
+  },
+  {
+    "name": "Healthy Teeth - Croydon",
+    "address": "107 Baker Street, London SW5 2VZ",
+    "phone": "020 7175 4456",
+    "link": "https://example-dental-37.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Periodontics",
+      "Dentures",
+      "Preventive",
+      "Veneers",
+      "Check-Up",
+      "Children",
+      "Crown",
+      "Fillings"
+    ],
+    "languages": [
+      "English",
+      "Romanian",
+      "Hindi"
+    ],
+    "area": "Croydon",
+    "postcode": "SW5",
+    "nhs": true,
+    "private": true,
+    "emergency": false,
+    "children": true,
+    "wheelchair_access": true,
+    "parking": true,
+    "rating": 3.8,
+    "opening_hours": "Mon-Thu: 8am-7pm, Fri: 8am-5pm"
+  },
+  {
+    "name": "Bright Smile - Ealing",
+    "address": "156 Church Street, London W4 1YE",
+    "phone": "020 7313 1118",
+    "link": "https://example-dental-38.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Emergency",
+      "Endodontics",
+      "Braces",
+      "Dentures",
+      "Periodontics"
+    ],
+    "languages": [
+      "English",
+      "German",
+      "Vietnamese",
+      "Tagalog",
+      "Norwegian"
+    ],
+    "area": "Ealing",
+    "postcode": "W4",
+    "nhs": true,
+    "private": false,
+    "emergency": true,
+    "children": false,
+    "wheelchair_access": true,
+    "parking": false,
+    "rating": 3.9,
+    "opening_hours": "Mon-Fri: 8am-6pm"
+  },
+  {
+    "name": "Dental Clinic - Hammersmith",
+    "address": "261 Station Road, London W7 1GV",
+    "phone": "020 7149 3407",
+    "link": "https://example-dental-39.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Dental Hygiene",
+      "Preventive",
+      "Cleaning",
+      "Root Canal",
+      "Periodontics"
+    ],
+    "languages": [
+      "English",
+      "Swedish",
+      "Hebrew",
+      "Bengali"
+    ],
+    "area": "Hammersmith",
+    "postcode": "W7",
+    "nhs": false,
+    "private": true,
+    "emergency": true,
+    "children": true,
+    "wheelchair_access": false,
+    "parking": true,
+    "rating": 3.8,
+    "opening_hours": "Mon-Fri: 9am-6pm, Sat: 9am-1pm"
+  },
+  {
+    "name": "Dental Care - Barking",
+    "address": "83 Church Street, London W10 9HR",
+    "phone": "020 7312 7034",
+    "link": "https://example-dental-40.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Periodontics",
+      "Wisdom Teeth",
+      "Dental Hygiene",
+      "Cleaning"
+    ],
+    "languages": [
+      "English",
+      "Farsi"
+    ],
+    "area": "Barking",
+    "postcode": "W10",
+    "nhs": false,
+    "private": true,
+    "emergency": true,
+    "children": false,
+    "wheelchair_access": true,
+    "parking": true,
+    "rating": 4.8,
+    "opening_hours": "Mon-Fri: 9am-7pm, Sat: 9am-5pm"
+  },
+  {
+    "name": "Elite Dental - Sutton",
+    "address": "80 Bridge Street, London N3 7VR",
+    "phone": "020 7142 4713",
+    "link": "https://example-dental-41.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Root Canal",
+      "Veneers",
+      "Cosmetic Dentistry"
+    ],
+    "languages": [
+      "English",
+      "Norwegian"
+    ],
+    "area": "Sutton",
+    "postcode": "N3",
+    "nhs": false,
+    "private": true,
+    "emergency": true,
+    "children": false,
+    "wheelchair_access": true,
+    "parking": true,
+    "rating": 4.4,
+    "opening_hours": "Mon-Fri: 8am-6pm"
+  },
+  {
+    "name": "Premier Dental - Richmond",
+    "address": "134 Main Road, London N3 5DQ",
+    "phone": "020 7057 9600",
+    "link": "https://example-dental-42.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Dental Hygiene",
+      "Root Canal",
+      "Pediatric",
+      "Endodontics",
+      "Oral Health",
+      "Veneers",
+      "Scale and Polish"
+    ],
+    "languages": [
+      "English",
+      "Hebrew",
+      "French",
+      "Spanish"
+    ],
+    "area": "Richmond",
+    "postcode": "N3",
+    "nhs": true,
+    "private": true,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": 4.8,
+    "opening_hours": "Mon-Fri: 9am-7pm, Sat: 9am-5pm"
+  },
+  {
+    "name": "Dental Clinic - Merton",
+    "address": "258 Bridge Street, London EC2 2JR",
+    "phone": "020 7523 4903",
+    "link": "https://example-dental-43.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Crown",
+      "Braces",
+      "Root Canal",
+      "Bridge",
+      "Fillings",
+      "Extraction",
+      "Children"
+    ],
+    "languages": [
+      "English",
+      "Turkish",
+      "Dutch"
+    ],
+    "area": "Merton",
+    "postcode": "EC2",
+    "nhs": false,
+    "private": true,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": true,
+    "parking": false,
+    "rating": 4.0,
+    "opening_hours": "Mon-Thu: 8am-7pm, Fri: 8am-5pm"
+  },
+  {
+    "name": "Advanced Dental - Brent",
+    "address": "132 Bridge Street, London SW3 4IZ",
+    "phone": "020 7555 8364",
+    "link": "https://example-dental-44.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Orthodontics",
+      "Prosthodontics",
+      "Periodontics",
+      "Endodontics",
+      "Veneers"
+    ],
+    "languages": [
+      "English",
+      "Swedish",
+      "Japanese",
+      "Bengali"
+    ],
+    "area": "Brent",
+    "postcode": "SW3",
+    "nhs": true,
+    "private": true,
+    "emergency": false,
+    "children": true,
+    "wheelchair_access": false,
+    "parking": true,
+    "rating": 4.2,
+    "opening_hours": "Mon-Fri: 9am-7pm, Sat: 9am-5pm"
+  },
+  {
+    "name": "Dental Studio - Lambeth",
+    "address": "288 Baker Street, London NW4 3IT",
+    "phone": "020 7169 9001",
+    "link": "https://example-dental-45.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Pediatric",
+      "Dental X-Ray",
+      "Restorative",
+      "Cosmetic Dentistry"
+    ],
+    "languages": [
+      "English",
+      "Punjabi",
+      "Russian",
+      "Spanish"
+    ],
+    "area": "Lambeth",
+    "postcode": "NW4",
+    "nhs": false,
+    "private": true,
+    "emergency": false,
+    "children": true,
+    "wheelchair_access": true,
+    "parking": false,
+    "rating": 3.8,
+    "opening_hours": "Mon-Fri: 7am-8pm, Sat: 9am-4pm"
+  },
+  {
+    "name": "Comprehensive Dental - Fulham",
+    "address": "214 Baker Street, London W5 1KF",
+    "phone": "020 7990 3877",
+    "link": "https://example-dental-46.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Gum Treatment",
+      "Implants",
+      "Restorative"
+    ],
+    "languages": [
+      "English",
+      "Italian"
+    ],
+    "area": "Fulham",
+    "postcode": "W5",
+    "nhs": true,
+    "private": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": true,
+    "parking": true,
+    "rating": 4.0,
+    "opening_hours": "Mon-Thu: 8am-7pm, Fri: 8am-5pm"
+  },
+  {
+    "name": "Dental Clinic - Haringey",
+    "address": "148 Station Road, London W6 6IX",
+    "phone": "020 7334 6225",
+    "link": "https://example-dental-47.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Wisdom Teeth",
+      "Bridge",
+      "Root Canal",
+      "Dentures",
+      "Prosthodontics",
+      "Scale and Polish"
+    ],
+    "languages": [
+      "English",
+      "Italian",
+      "Polish",
+      "Punjabi",
+      "Japanese"
+    ],
+    "area": "Haringey",
+    "postcode": "W6",
+    "nhs": true,
+    "private": true,
+    "emergency": true,
+    "children": true,
+    "wheelchair_access": true,
+    "parking": false,
+    "rating": 3.8,
+    "opening_hours": "Mon-Fri: 9am-6pm"
+  },
+  {
+    "name": "Elite Dental - Croydon",
+    "address": "107 Park Road, London SW4 6ZK",
+    "phone": "020 7927 4979",
+    "link": "https://example-dental-48.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Cleaning",
+      "Oral Health",
+      "Preventive",
+      "Extraction",
+      "Orthodontics",
+      "Check-Up",
+      "Veneers",
+      "Bridge"
+    ],
+    "languages": [
+      "English",
+      "German",
+      "Spanish",
+      "Korean"
+    ],
+    "area": "Croydon",
+    "postcode": "SW4",
+    "nhs": true,
+    "private": true,
+    "emergency": false,
+    "children": true,
+    "wheelchair_access": true,
+    "parking": true,
+    "rating": 3.9,
+    "opening_hours": "Mon-Fri: 7am-8pm, Sat: 9am-4pm"
+  },
+  {
+    "name": "Family Dental - Waltham Forest",
+    "address": "300 Main Road, London E5 2GL",
+    "phone": "020 7451 2950",
+    "link": "https://example-dental-49.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Fillings",
+      "Bridge",
+      "Braces",
+      "Oral Surgery",
+      "Gum Treatment",
+      "General Dentistry"
+    ],
+    "languages": [
+      "English",
+      "Thai",
+      "Farsi",
+      "Arabic",
+      "Korean"
+    ],
+    "area": "Waltham Forest",
+    "postcode": "E5",
+    "nhs": true,
+    "private": true,
+    "emergency": false,
+    "children": true,
+    "wheelchair_access": true,
+    "parking": false,
+    "rating": 3.6,
+    "opening_hours": "Mon-Fri: 8am-5pm, Sat: 9am-1pm"
+  },
+  {
+    "name": "Smile Dental - Chelsea",
+    "address": "69 Victoria Street, London W1 8NH",
+    "phone": "020 7148 3609",
+    "link": "https://example-dental-50.co.uk",
+    "source": "Sample Data",
+    "services": [
+      "Oral Surgery",
+      "General Dentistry",
+      "Oral Health"
+    ],
+    "languages": [
+      "English",
+      "Spanish",
+      "Thai",
+      "Norwegian",
+      "Dutch"
+    ],
+    "area": "Chelsea",
+    "postcode": "W1",
+    "nhs": false,
+    "private": true,
+    "emergency": true,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": true,
+    "rating": 4.0,
+    "opening_hours": "Mon-Fri: 7am-7pm"
+  }
+]

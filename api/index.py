@@ -31,8 +31,8 @@ app.add_middleware(
 # Data file paths - Vercel serverless functions can read from project files
 # Files need to be in the same directory or use absolute paths
 DATA_DIR = Path(__file__).parent.parent  # Go up from api/ to root
-JSON_FILE = DATA_DIR / "dental_clinics_london.json"
-METADATA_FILE = DATA_DIR / "metadata.json"
+JSON_FILE = DATA_DIR / "data" / "private_dental_clinics_london.json"
+METADATA_FILE = DATA_DIR / "data" / "metadata.json"
 
 # Fallback: try to load from environment variable (for embedded data)
 # Or use relative path from api folder
