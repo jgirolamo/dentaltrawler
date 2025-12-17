@@ -36,35 +36,60 @@ function Search() {
     // Try to fetch real data first, fallback to embedded data
     async function loadData() {
       try {
+        // Check if clinicsData is loaded
+        if (!clinicsData || !Array.isArray(clinicsData) || clinicsData.length === 0) {
+          console.error('❌ clinicsData is not loaded or empty');
+          setResults([]);
+          return;
+        }
+        
+        console.log(`✅ Loaded ${clinicsData.length} clinics`);
+        
         // Try fetching real NHS data (if available)
         // const realClinics = await fetchRealClinics();
         // if (realClinics.length > 0) {
         //   clinicsData = realClinics;
         // }
       } catch (error) {
-        console.log('Using embedded clinic data');
+        console.error('❌ Error loading clinic data:', error);
+        setResults([]);
+        return;
       }
       
-      // Extract unique services and languages from data
-      const allServices = new Set();
-      const allLanguages = new Set();
-      
-      clinicsData.forEach(clinic => {
-        clinic.services?.forEach(s => allServices.add(s));
-        clinic.languages?.forEach(l => allLanguages.add(l));
-      });
-      
-      setServices(Array.from(allServices).sort());
-      setLanguages(Array.from(allLanguages).sort());
-      setMetadata({ last_updated: new Date().toISOString(), total_clinics: clinicsData.length });
-      
-      // Auto-search on initial load to show all clinics
-      const initialResults = clinicsData.map(clinic => ({
-        clinic,
-        match: { score: 100, details: [], matched_services: [], matched_languages: [] },
-        score: 100
-      }));
-      setResults(initialResults);
+      try {
+        // Extract unique services and languages from data
+        const allServices = new Set();
+        const allLanguages = new Set();
+        
+        clinicsData.forEach(clinic => {
+          if (clinic.services && Array.isArray(clinic.services)) {
+            clinic.services.forEach(s => allServices.add(s));
+          }
+          if (clinic.languages && Array.isArray(clinic.languages)) {
+            clinic.languages.forEach(l => allLanguages.add(l));
+          }
+        });
+        
+        setServices(Array.from(allServices).sort());
+        setLanguages(Array.from(allLanguages).sort());
+        setMetadata({ last_updated: new Date().toISOString(), total_clinics: clinicsData.length });
+        
+        // Auto-search on initial load to show all clinics
+        const initialResults = clinicsData.map(clinic => ({
+          clinic,
+          match: { score: 100, details: [], matched_services: [], matched_languages: [] },
+          score: 100
+        }));
+        
+        // Limit to MAX_RESULTS for initial display
+        const limitedInitialResults = initialResults.slice(0, MAX_RESULTS);
+        setResults(limitedInitialResults);
+        
+        console.log(`✅ Initial results set: ${limitedInitialResults.length} clinics`);
+      } catch (error) {
+        console.error('❌ Error processing clinic data:', error);
+        setResults([]);
+      }
     }
     
     loadData();
@@ -106,6 +131,14 @@ function Search() {
     setLoading(true);
     setTimeout(() => {
       try {
+        // Validate clinicsData
+        if (!clinicsData || !Array.isArray(clinicsData) || clinicsData.length === 0) {
+          console.error('❌ clinicsData is not available for search');
+          setResults([]);
+          setLoading(false);
+          return;
+        }
+        
         const results = [];
         
         for (const clinic of clinicsData) {
