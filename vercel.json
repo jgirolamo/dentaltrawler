@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "version": 2,
   "builds": [
@@ -31,3 +32,24 @@
   ]
 }
 
+=======
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "dentaltrawler/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/dentaltrawler/$1"
+    }
+  ]
+}
+
+>>>>>>> 7b08c46b2c93945ae5746e5ac7ad7018a1a7ab7e
