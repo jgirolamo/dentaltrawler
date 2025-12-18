@@ -1,243 +1,133 @@
-<<<<<<< HEAD
-# Dental Service Trawler for London, UK
+# Dental Trawler - London Dental Clinic Search
 
-A web scraper that collects information about dental clinics in London, UK, including:
-- Services provided
-- Languages spoken at the clinic
+A modern web application for searching and discovering private dental clinics in London, UK.
 
-## Features
+## 🚀 Features
 
-- Scrapes dental clinic information from NHS directory
-- Extracts services offered (general dentistry, orthodontics, cosmetic, etc.)
-- Identifies languages spoken by clinic staff
-- Exports data to JSON and CSV formats
-- Respectful scraping with delays between requests
+- **Real Clinic Data**: 48+ verified dental clinics from OpenStreetMap
+- **Advanced Search**: Filter by services, languages, area, postcode, and more
+- **Interactive Dashboard**: Statistics and visualizations
+- **Error Logging**: Comprehensive error tracking and monitoring
+- **Responsive Design**: Works on desktop and mobile devices
 
-## Installation
+## 📋 Quick Start
 
-1. Install Python 3.8 or higher
+### Prerequisites
 
-2. Install required packages:
-```bash
-pip install -r requirements.txt
+- Node.js 20+ and npm
+- Python 3.8+ (for data collection scripts)
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/jgirolamo/dentaltrawler.git
+   cd dentaltrawler
+   ```
+
+2. **Install frontend dependencies:**
+   ```bash
+   cd dentaltrawler
+   npm install
+   ```
+
+3. **Run locally:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in browser:**
+   ```
+   http://localhost:5173
+   ```
+
+## 📁 Project Structure
+
+```
+dentaltrawler/
+├── src/              # React frontend source
+├── public/           # Static assets
+├── dist/             # Build output
+scripts/              # Data collection scripts
+├── data/             # Data files (JSON, CSV)
+├── docs/             # Documentation
+└── api/              # Vercel serverless functions
 ```
 
-## Usage
+## 🔧 Data Sources
 
-### Basic Usage
+Currently using **OpenStreetMap** (free, no API key required) for real dental clinic data.
 
-Run the scraper with default settings:
-```bash
-python dental_trawler.py
-```
+To get more data:
+- **Google Places API**: Best quality (requires API key)
+- **Yelp Fusion API**: Great reviews (requires API key)
+- **OpenStreetMap**: Free, open-source (already implemented)
 
-This will:
-- Search for dental clinics in London
-- Scrape their websites for services and languages
-- Save results to `dental_clinics_london.json` and `dental_clinics_london.csv`
+See `docs/` for detailed guides on data sources.
 
-### Custom Usage
+## 🚀 Deployment
 
-You can modify the script to:
-- Change the location (currently set to "London")
-- Adjust the number of clinics to scrape
-- Add additional data sources
+The app is configured for **Vercel** deployment:
 
-Example:
-```python
-from dental_trawler import DentalServiceTrawler
+1. Push to GitHub
+2. Connect repository to Vercel
+3. Deploy automatically
 
-trawler = DentalServiceTrawler()
-clinics = trawler.run(location="London", max_clinics=50)
-trawler.save_to_json("data/my_results.json")
-trawler.save_to_csv("data/my_results.csv")
-```
+See `docs/DEPLOYMENT.md` for detailed instructions.
 
-## Output Format
+## 📚 Documentation
 
-### JSON Output
-```json
-[
-  {
-    "name": "Clinic Name",
-    "address": "123 Street, London",
-    "phone": "020 1234 5678",
-    "services": ["General Dentistry", "Orthodontics", "Teeth Whitening"],
-    "languages": ["English", "Spanish", "Polish"],
-    "link": "https://clinic-website.com",
-    "source": "NHS Directory"
-  }
-]
-```
+All documentation is in the `docs/` directory:
 
-### CSV Output
-The CSV file contains columns:
-- name
-- address
-- phone
-- services (comma-separated)
-- languages (comma-separated)
-- link
-- source
+- **Getting Started**: `docs/README.md`
+- **Data Sources**: `docs/GET_REAL_DATA.md`, `ALTERNATIVE_APIS.md`
+- **Deployment**: `docs/DEPLOYMENT.md`, `docs/VERCEL_DEPLOY.md`
+- **Error Logging**: `ERROR_LOGGING.md`, `HOW_TO_ACCESS_LOGS.md`
+- **Project Structure**: `docs/PROJECT_STRUCTURE.md`
 
-## Data Sources
+## 🛠️ Development
 
-Currently scrapes from:
-- **NHS Service Finder**: Official NHS directory of dental practices
-
-Future enhancements could include:
-- Google Places API
-- Yelp
-- Other dental directory websites
-
-## Important Notes
-
-1. **Rate Limiting**: The scraper includes delays between requests to be respectful to websites
-2. **Website Changes**: Web scraping is sensitive to website structure changes
-3. **Legal Compliance**: Ensure you comply with websites' terms of service and robots.txt
-4. **API Alternatives**: For production use, consider using official APIs (e.g., Google Places API, NHS API)
-
-## Quick Start
-
-### Frontend (React)
+### Frontend
 ```bash
 cd dentaltrawler
-npm install
-npm run dev
-# Visit http://localhost:5173
+npm run dev      # Development server
+npm run build    # Production build
+npm run preview  # Preview production build
 ```
 
-### Fetch Private Clinic Data
+### Data Collection
 ```bash
-python scripts/fetch_private_clinics.py
+# Get real data from OpenStreetMap (free)
+python3 scripts/fetch_openstreetmap.py London 50
+
+# Or use other sources (see scripts/README.md)
 ```
 
-## Documentation
+## 📊 Current Status
 
-See the `docs/` directory for detailed guides:
-- **docs/DEPLOYMENT.md** - Deployment instructions
-- **docs/GET_PRIVATE_CLINICS.md** - Getting private clinic data
-- **docs/LOCAL_DEBUG.md** - Local debugging guide
+- ✅ **48 real dental clinics** from OpenStreetMap
+- ✅ **Frontend**: React + Vite
+- ✅ **Deployment**: Vercel
+- ✅ **Error Logging**: Comprehensive system
+- ✅ **Search**: Advanced filtering and pagination
 
-## Troubleshooting
+## 🤝 Contributing
 
-- If scraping fails, websites may have changed their structure
-- Some websites may block automated requests
-- Consider using official APIs for more reliable data access
-- See `docs/` for troubleshooting guides
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
 
-## License
+## 📝 License
 
-This project is for educational purposes. Please respect websites' terms of service and robots.txt files.
+This project is open source and available under the MIT License.
 
-=======
-# Dental Clinic Search for London, UK
+## 🔗 Links
 
-A search tool for finding dental clinics in London, UK, including:
-- NHS and private practices
-- Services provided
-- Languages spoken at the clinic
+- **Live App**: [Vercel Deployment]
+- **Error Logs**: `/error-logs` (in app)
+- **HTML Directory**: `/clinics.html` (in app)
 
-## Features
+---
 
-- Scrapes dental clinic information from NHS directory
-- Extracts services offered (general dentistry, orthodontics, cosmetic, etc.)
-- Identifies languages spoken by clinic staff
-- Exports data to JSON and CSV formats
-- Respectful scraping with delays between requests
-
-## Installation
-
-1. Install Python 3.8 or higher
-
-2. Install required packages:
-```bash
-pip install -r requirements.txt
-```
-
-## Usage
-
-### Basic Usage
-
-Run the scraper with default settings:
-```bash
-python dental_trawler.py
-```
-
-This will:
-- Search for dental clinics in London
-- Scrape their websites for services and languages
-- Save results to `dental_clinics_london.json` and `dental_clinics_london.csv`
-
-### Custom Usage
-
-You can modify the script to:
-- Change the location (currently set to "London")
-- Adjust the number of clinics to scrape
-- Add additional data sources
-
-Example:
-```python
-from dental_trawler import DentalServiceTrawler
-
-trawler = DentalServiceTrawler()
-clinics = trawler.run(location="London", max_clinics=50)
-trawler.save_to_json("my_results.json")
-trawler.save_to_csv("my_results.csv")
-```
-
-## Output Format
-
-### JSON Output
-```json
-[
-  {
-    "name": "Clinic Name",
-    "address": "123 Street, London",
-    "phone": "020 1234 5678",
-    "services": ["General Dentistry", "Orthodontics", "Teeth Whitening"],
-    "languages": ["English", "Spanish", "Polish"],
-    "link": "https://clinic-website.com",
-    "source": "NHS Directory"
-  }
-]
-```
-
-### CSV Output
-The CSV file contains columns:
-- name
-- address
-- phone
-- services (comma-separated)
-- languages (comma-separated)
-- link
-- source
-
-## Data Sources
-
-Currently scrapes from:
-- **NHS Service Finder**: Official NHS directory of dental practices
-
-Future enhancements could include:
-- Google Places API
-- Yelp
-- Other dental directory websites
-
-## Important Notes
-
-1. **Rate Limiting**: The scraper includes delays between requests to be respectful to websites
-2. **Website Changes**: Web scraping is sensitive to website structure changes
-3. **Legal Compliance**: Ensure you comply with websites' terms of service and robots.txt
-4. **API Alternatives**: For production use, consider using official APIs (e.g., Google Places API, NHS API)
-
-## Troubleshooting
-
-- If scraping fails, websites may have changed their structure
-- Some websites may block automated requests
-- Consider using official APIs for more reliable data access
-
-## License
-
-This project is for educational purposes. Please respect websites' terms of service and robots.txt files.
-
->>>>>>> 7b08c46b2c93945ae5746e5ac7ad7018a1a7ab7e
+For detailed documentation, see the `docs/` directory.
