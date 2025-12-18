@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import { clinicsData } from '../clinics';
 import './Search.css';
 
+// Debug: Log data on load
+console.log('📊 Loaded clinicsData:', clinicsData.length, 'clinics');
+console.log('📅 Sample clinic:', clinicsData[0]?.name || 'No data');
+
 function Search() {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);

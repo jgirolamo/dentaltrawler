@@ -1,4 +1,7 @@
 // Private London dental clinic data
+// Last updated: 2025-12-18 10:09:11
+// Total clinics: 48
+// Source: OpenStreetMap (Free)
 export const clinicsData = [
   {
     "name": "Private Central London Dentist",
