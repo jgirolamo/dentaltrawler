@@ -1,29 +1,25 @@
 # Documentation Index
 
-This directory contains all project documentation.
+## Quick Links
 
-## Quick Start Guides
-- **QUICK_START_PRIVATE.md** - Quick guide to get private clinic data
-- **LOCAL_DEBUG.md** - Guide for local debugging
-- **UPGRADE_NODE.md** - Node.js upgrade instructions
+- **Getting Real Data**: [GET_REAL_DATA.md](GET_REAL_DATA.md)
+- **Deployment**: [DEPLOYMENT.md](DEPLOYMENT.md)
+- **Vercel Setup**: [VERCEL_DEPLOY.md](VERCEL_DEPLOY.md)
+- **Project Structure**: [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md)
 
-## Deployment
-- **DEPLOYMENT.md** - General deployment guide
-- **DEPLOYMENT_RECOMMENDATION.md** - Recommended deployment architecture
-- **VERCEL_FULL_DEPLOY.md** - Complete Vercel deployment guide
-- **GITHUB_SETUP.md** - GitHub repository setup
+## Data Sources
 
-## Data & Integration
-- **GET_PRIVATE_CLINICS.md** - Detailed guide for getting private clinic data
-- **PRIVATE_CLINICS_README.md** - Private clinics overview
-- **INTEGRATION_COMPLETE.md** - Integration status and notes
-- **README_REAL_DATA.md** - Guide for getting real NHS data
+- **Google Places API**: See [GET_REAL_DATA.md](GET_REAL_DATA.md)
+- **Alternative APIs**: See root [ALTERNATIVE_APIS.md](../ALTERNATIVE_APIS.md)
+- **Scraping Status**: See root [SCRAPING_STATUS.md](../SCRAPING_STATUS.md)
 
-## Troubleshooting
-- **VERCEL_SEARCH_FIX.md** - Fixing search issues on Vercel
-- **DEBUG_CHECKLIST.md** - Debugging checklist
-- **CURSOR_BUG_REPORT.md** - Bug reports and notes
+## Error Logging
 
-## Main Documentation
-See the root **README.md** for the main project overview.
+- **Error Logging Guide**: See root [ERROR_LOGGING.md](../ERROR_LOGGING.md)
+- **Accessing Logs**: See root [HOW_TO_ACCESS_LOGS.md](../HOW_TO_ACCESS_LOGS.md)
 
+## Vercel
+
+- **Deployment**: [DEPLOYMENT.md](DEPLOYMENT.md)
+- **Vercel Deploy**: [VERCEL_DEPLOY.md](VERCEL_DEPLOY.md)
+- **Vercel Diagnostics**: See root [VERCEL_DIAGNOSTICS.md](../VERCEL_DIAGNOSTICS.md)
