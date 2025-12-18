@@ -1,5 +1,14 @@
 {
-  "version": 2,
   "buildCommand": "cd dentaltrawler && npm install && npm run build",
-  "outputDirectory": "dentaltrawler/dist"
+  "outputDirectory": "dentaltrawler/dist",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
