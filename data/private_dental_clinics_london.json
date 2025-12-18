@@ -1,5 +1,26 @@
 [
   {
+    "name": "Dental Practice",
+    "address": "300, Caledonian Road, Greater London, N1 1ED",
+    "phone": null,
+    "link": null,
+    "postcode": "N1 1ED",
+    "area": "Barnsbury",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
     "name": "Private Central London Dentist",
     "address": "55, Wimpole Street, City of Westminster, W1G 8DQ",
     "phone": null,
@@ -231,12 +252,12 @@
     "opening_hours": null
   },
   {
-    "name": "The Haringey Dentist",
-    "address": "16, Green Lanes, City of London, N4 1LA",
-    "phone": null,
-    "link": "https://theharingeydentist.com",
-    "postcode": "N4 1LA",
-    "area": "Harringay",
+    "name": "Winning Smiles Dentist",
+    "address": "1, Colchester Road, Greater London, RM3 0AQ",
+    "phone": "+44 1708 241900",
+    "link": "https://winning-smiles.co.uk/",
+    "postcode": "RM3 0AQ",
+    "area": "Harold Wood",
     "services": [],
     "languages": [
       "English"
@@ -249,7 +270,28 @@
     "wheelchair_access": false,
     "parking": false,
     "rating": null,
-    "opening_hours": null
+    "opening_hours": "Mo,Tu 09:00-19:00; We 08:00-18:00; Th 08:00-17:00; Fr 08:00-16:00; Sa 8:30-12:30"
+  },
+  {
+    "name": "Banning dentist",
+    "address": "The Highway, Greater London, E1W 2AQ",
+    "phone": null,
+    "link": null,
+    "postcode": "E1W 2AQ",
+    "area": "Wapping",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": "Mo,We 09:00-20:00; Tu,Th 08:00-17:00; Fr,Sa 09:00-17:00; Su 10:00-14:00"
   },
   {
     "name": "Dental Practice of Cosmetic Dentist",
@@ -273,54 +315,12 @@
     "opening_hours": null
   },
   {
-    "name": "Inglehurst Dentist Practice",
-    "address": "51, Redbridge Lane East, Greater London, IG4 5EY",
-    "phone": "+44 20 8551 3550",
-    "link": null,
-    "postcode": "IG4 5EY",
-    "area": "Redbridge",
-    "services": [],
-    "languages": [
-      "English"
-    ],
-    "source": "OpenStreetMap (Free)",
-    "private": true,
-    "nhs": false,
-    "emergency": false,
-    "children": false,
-    "wheelchair_access": false,
-    "parking": false,
-    "rating": null,
-    "opening_hours": "Mo-Fr 09:00-13:00,14:00-17:00; Sa-Su off"
-  },
-  {
-    "name": "Winning Smiles Dentist",
-    "address": "1, Colchester Road, Greater London, RM3 0AQ",
-    "phone": "+44 1708 241900",
-    "link": "https://winning-smiles.co.uk/",
-    "postcode": "RM3 0AQ",
-    "area": "Harold Wood",
-    "services": [],
-    "languages": [
-      "English"
-    ],
-    "source": "OpenStreetMap (Free)",
-    "private": true,
-    "nhs": false,
-    "emergency": false,
-    "children": false,
-    "wheelchair_access": false,
-    "parking": false,
-    "rating": null,
-    "opening_hours": "Mo,Tu 09:00-19:00; We 08:00-18:00; Th 08:00-17:00; Fr 08:00-16:00; Sa 8:30-12:30"
-  },
-  {
-    "name": "{my} dentist",
-    "address": "392, Edgware Road, City of Westminster, W2 1DR",
+    "name": "The Haringey Dentist",
+    "address": "16, Green Lanes, City of London, N4 1LA",
     "phone": null,
-    "link": "https://www.mydentist.co.uk/dentists/practices/england/london/westminster/392-edgware-road",
-    "postcode": "W2 1DR",
-    "area": "Paddington",
+    "link": "https://theharingeydentist.com",
+    "postcode": "N4 1LA",
+    "area": "Harringay",
     "services": [],
     "languages": [
       "English"
@@ -378,27 +378,6 @@
     "opening_hours": null
   },
   {
-    "name": "Imperial College Dentist",
-    "address": "Exhibition Road, City of Westminster, SW7 2AZ",
-    "phone": null,
-    "link": null,
-    "postcode": "SW7 2AZ",
-    "area": "Knightsbridge",
-    "services": [],
-    "languages": [
-      "English"
-    ],
-    "source": "OpenStreetMap (Free)",
-    "private": true,
-    "nhs": false,
-    "emergency": false,
-    "children": false,
-    "wheelchair_access": false,
-    "parking": false,
-    "rating": null,
-    "opening_hours": "Mo-Th 08:00-20:00; Fr 08:00-20:00; Sa 09:00-17:00"
-  },
-  {
     "name": "My E20 Dentist",
     "address": "27, Villiers Gardens, Greater London, E20 1GW",
     "phone": null,
@@ -420,33 +399,12 @@
     "opening_hours": "Mo-Sa 09:00-21:00"
   },
   {
-    "name": "Quality Smile Dentist",
-    "address": "71, Bromley Road, Greater London, SE6 2UA",
-    "phone": "+44 20 8698 7097",
-    "link": "http://www.qualitysmilecare.co.uk/aboutus.php",
-    "postcode": "SE6 2UA",
-    "area": "Southend",
-    "services": [],
-    "languages": [
-      "English"
-    ],
-    "source": "OpenStreetMap (Free)",
-    "private": true,
-    "nhs": false,
-    "emergency": false,
-    "children": false,
-    "wheelchair_access": false,
-    "parking": false,
-    "rating": null,
-    "opening_hours": null
-  },
-  {
-    "name": "Sofia House dentist",
-    "address": "129c, Seaforth Avenue, Greater London, KT3 6JU",
+    "name": "{my} dentist",
+    "address": "392, Edgware Road, City of Westminster, W2 1DR",
     "phone": null,
-    "link": null,
-    "postcode": "KT3 6JU",
-    "area": "West Barnes",
+    "link": "https://www.mydentist.co.uk/dentists/practices/england/london/westminster/392-edgware-road",
+    "postcode": "W2 1DR",
+    "area": "Paddington",
     "services": [],
     "languages": [
       "English"
@@ -483,12 +441,117 @@
     "opening_hours": null
   },
   {
+    "name": "Sofia House dentist",
+    "address": "129c, Seaforth Avenue, Greater London, KT3 6JU",
+    "phone": null,
+    "link": null,
+    "postcode": "KT3 6JU",
+    "area": "West Barnes",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Quality Smile Dentist",
+    "address": "71, Bromley Road, Greater London, SE6 2UA",
+    "phone": "+44 20 8698 7097",
+    "link": "http://www.qualitysmilecare.co.uk/aboutus.php",
+    "postcode": "SE6 2UA",
+    "area": "Southend",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Imperial College Dentist",
+    "address": "Prince's Gardens, City of Westminster, SW7 1BF",
+    "phone": null,
+    "link": null,
+    "postcode": "SW7 1BF",
+    "area": "Knightsbridge",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": "Mo-Th 08:00-20:00; Fr 08:00-20:00; Sa 09:00-17:00"
+  },
+  {
+    "name": "Inglehurst Dentist Practice",
+    "address": "51, Redbridge Lane East, Greater London, IG4 5EY",
+    "phone": "+44 20 8551 3550",
+    "link": null,
+    "postcode": "IG4 5EY",
+    "area": "Redbridge",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": "Mo-Fr 09:00-13:00,14:00-17:00; Sa-Su off"
+  },
+  {
     "name": "Dentist & Hygienist",
     "address": "Kentish Town Road, Greater London, NW5 2EN",
     "phone": "+44 20 7267 7653",
     "link": null,
     "postcode": "NW5 2EN",
     "area": "Kentish Town",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "The Richmond Dentist",
+    "address": "Water Lane, Greater London, TW9 1TJ",
+    "phone": null,
+    "link": null,
+    "postcode": "TW9 1TJ",
+    "area": "St Margarets",
     "services": [],
     "languages": [
       "English"
@@ -546,12 +609,12 @@
     "opening_hours": null
   },
   {
-    "name": "Banning dentist",
-    "address": "The Highway, Greater London, E1W 2AQ",
+    "name": "Dental Clinic",
+    "address": "173, Kentish Town Road, Greater London, NW1 8PD",
     "phone": null,
     "link": null,
-    "postcode": "E1W 2AQ",
-    "area": "Wapping",
+    "postcode": "NW1 8PD",
+    "area": "Kentish Town",
     "services": [],
     "languages": [
       "English"
@@ -564,15 +627,15 @@
     "wheelchair_access": false,
     "parking": false,
     "rating": null,
-    "opening_hours": "Mo,We 09:00-20:00; Tu,Th 08:00-17:00; Fr,Sa 09:00-17:00; Su 10:00-14:00"
+    "opening_hours": null
   },
   {
-    "name": "The Richmond Dentist",
-    "address": "Water Lane, Greater London, TW9 1TJ",
+    "name": "Dental Surgery",
+    "address": "62A, Beddington Gardens, Greater London, SM6 0HW",
     "phone": null,
     "link": null,
-    "postcode": "TW9 1TJ",
-    "area": "St Margarets",
+    "postcode": "SM6 0HW",
+    "area": "Wallington",
     "services": [],
     "languages": [
       "English"
@@ -588,12 +651,12 @@
     "opening_hours": null
   },
   {
-    "name": "Glow Dentist",
-    "address": "87, Northcote Road, Greater London, SW11 6PW",
+    "name": "Dental Surgery (Acre Medical Services)",
+    "address": "422-424, Greenford Avenue, Greater London, W7 3DB",
     "phone": null,
-    "link": "https://www.glowdental.co.uk/",
-    "postcode": "SW11 6PW",
-    "area": "Clapham Junction",
+    "link": null,
+    "postcode": "W7 3DB",
+    "area": "Greenford",
     "services": [],
     "languages": [
       "English"
@@ -609,32 +672,158 @@
     "opening_hours": null
   },
   {
-    "name": "The Finchley Dentist",
-    "address": "26, Southern Road, Greater London, N2 9JG",
-    "phone": "+44 20 3488 0335",
-    "link": "https://www.thefinchleydentist.com/",
-    "postcode": "N2 9JG",
-    "area": "Muswell Hill",
-    "services": [],
-    "languages": [
-      "English"
-    ],
-    "source": "OpenStreetMap (Free)",
-    "private": true,
-    "nhs": false,
-    "emergency": false,
-    "children": false,
-    "wheelchair_access": false,
-    "parking": false,
-    "rating": null,
-    "opening_hours": null
-  },
-  {
-    "name": "Kensington Dentist",
-    "address": "4, Wrights Lane, Greater London, W8 5SW",
+    "name": "West London Orthodontist",
+    "address": "89, Hammersmith Grove, Greater London, W6 0NQ",
     "phone": null,
-    "link": "http://kensington-dentist.com/",
-    "postcode": "W8 5SW",
+    "link": null,
+    "postcode": "W6 0NQ",
+    "area": "Hammersmith",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "The London Centre for Cosmetic Dentistry",
+    "address": "93, Haverstock Hill, Greater London, NW3 4RL",
+    "phone": "+44 20 7722 1235",
+    "link": "https://www.londoncosmeticdentistry.co.uk",
+    "postcode": "NW3 4RL",
+    "area": "Chalk Farm",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Kensal Rise Dental & Cosmetic Centre",
+    "address": "98, Chamberlayne Road, Greater London, NW10 3JN",
+    "phone": null,
+    "link": null,
+    "postcode": "NW10 3JN",
+    "area": "Brondesbury",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Cosmetic & Family Dental Surgery",
+    "address": "307-309, King Street, Greater London, W6 9NH",
+    "phone": null,
+    "link": null,
+    "postcode": "W6 9NH",
+    "area": "Hammersmith",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Bespoke Dental & Implant Clinic",
+    "address": "370, Old Street, Greater London, EC1V 9AU",
+    "phone": null,
+    "link": null,
+    "postcode": "EC1V 9AU",
+    "area": "Shoreditch",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Ardleigh Green Dental & Implant Clinic",
+    "address": "Ardleigh Green Road, Greater London, RM11 2LQ",
+    "phone": null,
+    "link": null,
+    "postcode": "RM11 2LQ",
+    "area": "Ardleigh Green",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Angel Dental Implant Centre",
+    "address": "92, Chamberlayne Road, Greater London, NW10 3JL",
+    "phone": null,
+    "link": "http://www.angel-implants-centre.co.uk/",
+    "postcode": "NW10 3JL",
+    "area": "Brondesbury",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Scarsdale Dental & Implant Clinic",
+    "address": "67, Earl's Court Road, Greater London, W8 6EG",
+    "phone": "+44 20 7937 2160",
+    "link": "https://www.scarsdaledental.co.uk/",
+    "postcode": "W8 6EG",
     "area": "Kensington",
     "services": [],
     "languages": [
@@ -651,12 +840,54 @@
     "opening_hours": null
   },
   {
-    "name": "New Kings Road Dentist",
-    "address": "New King's Road, Greater London, SW6 4SE",
+    "name": "Dental & Implant Practice",
+    "address": "Byron Hill Road, Greater London, HA2 0HY",
+    "phone": "+44 20 8426 5250",
+    "link": null,
+    "postcode": "HA2 0HY",
+    "area": "Sudbury Hill",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Heath Street Dental, Orthodontic & Implant Centre",
+    "address": "116, Heath Street, Greater London, NW3 1DR",
+    "phone": "+44 20 7813 5000",
+    "link": "https://heathstreetdental.co.uk/",
+    "postcode": "NW3 1DR",
+    "area": "Belsize Park",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "London Dental Implant",
+    "address": "158-160, Battersea Park Road, Greater London, SW11 4ER",
     "phone": null,
     "link": null,
-    "postcode": "SW6 4SE",
-    "area": "Fulham",
+    "postcode": "SW11 4ER",
+    "area": "Battersea",
     "services": [],
     "languages": [
       "English"
@@ -672,12 +903,12 @@
     "opening_hours": null
   },
   {
-    "name": "John Lott Dentist",
-    "address": "735, Wonderland Road North, London, N6H 4L1",
-    "phone": "+1-519-657-6767",
-    "link": "http://www.thetoothteam.com",
-    "postcode": "N6H 4L1",
-    "area": "London",
+    "name": "75 Harley Street Dental Practice",
+    "address": "75, Harley Street, City of Westminster, W1G 8QL",
+    "phone": null,
+    "link": "https://www.75harleystreet.co.uk/",
+    "postcode": "W1G 8QL",
+    "area": "Marylebone",
     "services": [],
     "languages": [
       "English"
@@ -693,12 +924,12 @@
     "opening_hours": null
   },
   {
-    "name": "LightHouse Dental London",
-    "address": "1850, Adelaide Street North, London, N5X 4B7",
-    "phone": "+1-519-964-8888",
-    "link": "https://london.lighthousedental.ca/",
-    "postcode": "N5X 4B7",
-    "area": "London",
+    "name": "19 Wimpole Street Dental Practice",
+    "address": "19, Wimpole Street, City of Westminster, W1G 8GE",
+    "phone": null,
+    "link": null,
+    "postcode": "W1G 8GE",
+    "area": "Marylebone",
     "services": [],
     "languages": [
       "English"
@@ -711,7 +942,154 @@
     "wheelchair_access": false,
     "parking": false,
     "rating": null,
-    "opening_hours": "Mo-Su 09:00-20:00"
+    "opening_hours": null
+  },
+  {
+    "name": "McKennel Dental Practice",
+    "address": "21, Churton Street, City of Westminster, SW1V 2LY",
+    "phone": "+44 20 7834 8802",
+    "link": null,
+    "postcode": "SW1V 2LY",
+    "area": "Pimlico",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Stanhope Place Dental Practice",
+    "address": "10, Stanhope Place, City of Westminster, W2 2HL",
+    "phone": "+44 20 7724 7440",
+    "link": "https://stanhopeplace.co.uk/",
+    "postcode": "W2 2HL",
+    "area": "Marylebone",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Your Dental Practice",
+    "address": "45, Essex Street, City of Westminster, WC2R 3JF",
+    "phone": null,
+    "link": null,
+    "postcode": "WC2R 3JF",
+    "area": "City of Westminster",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Shirland Dental Practice",
+    "address": "142, Elgin Avenue, City of Westminster, W9 2NT",
+    "phone": null,
+    "link": "https://www.shirlanddentalpractice.co.uk/",
+    "postcode": "W9 2NT",
+    "area": "Kensal Town",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Marylebone House Dental Practice",
+    "address": "Marylebone Road, City of Westminster, NW1 5PN",
+    "phone": null,
+    "link": null,
+    "postcode": "NW1 5PN",
+    "area": "Marylebone",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Covent Garden Dental Practice",
+    "address": "61g, Odhams Walk, City of Westminster, WC2H 9HZ",
+    "phone": null,
+    "link": "https://www.cgdp.com/",
+    "postcode": "WC2H 9HZ",
+    "area": "City of Westminster",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Queensway Dental Practice",
+    "address": "82, Queensway, City of Westminster, W2 3RY",
+    "phone": null,
+    "link": "https://queenswaydentalpractice.com/",
+    "postcode": "W2 3RY",
+    "area": "Bayswater",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
   },
   {
     "name": "Westminster House Dental Practice",
@@ -735,12 +1113,516 @@
     "opening_hours": "Mo-Th 08:00-20:00; Fr 08:00-18:30; Sa 09:00-13:00"
   },
   {
+    "name": "Porchester Dental Practice",
+    "address": "11, Porchester Gardens, City of Westminster, W2 4DB",
+    "phone": "+44 20 7727 3650",
+    "link": null,
+    "postcode": "W2 4DB",
+    "area": "Bayswater",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Keep Smiling Dental Practice",
+    "address": "156, Westbourne Grove, City of Westminster, W11 2RJ",
+    "phone": "+44 20 7229 0752",
+    "link": "https://www.keepsmilinguk.co.uk/",
+    "postcode": "W11 2RJ",
+    "area": "Kensal Town",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Paddington Dental Practice",
+    "address": "17, Craven Road, City of Westminster, W2 3BP",
+    "phone": "+44 20 7723 6106",
+    "link": "https://paddingtondental.co.uk/",
+    "postcode": "W2 3BP",
+    "area": "Paddington",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Garden Square Dental Practice",
+    "address": "50, Kensington Gardens Square, City of Westminster, W2 4BQ",
+    "phone": "+44 20 7229 8716",
+    "link": "https://www.gardensquaredental.co.uk/",
+    "postcode": "W2 4BQ",
+    "area": "Kensal Town",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Sardinia House Dental Practice",
+    "address": "52, Lincoln's Inn Fields, City of Westminster, WC2A 3LZ",
+    "phone": "+44 20 7404 8600",
+    "link": "https://sardiniadental.com/",
+    "postcode": "WC2A 3LZ",
+    "area": "City of Westminster",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "London Smile Care Dental Clinic",
+    "address": "2, Upper Wimpole Street, City of Westminster, W1G 6LQ",
+    "phone": null,
+    "link": null,
+    "postcode": "W1G 6LQ",
+    "area": "Marylebone",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "128 Harley Street Dental Clinic",
+    "address": "128, Harley Street, City of Westminster, W1G 7JT",
+    "phone": null,
+    "link": "https://www.128harleystreetdentalclinic.co.uk/",
+    "postcode": "W1G 7JT",
+    "area": "Marylebone",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Notting Hill Dental Clinic",
+    "address": "45, Hereford Road, City of Westminster, W2 5AJ",
+    "phone": null,
+    "link": "https://nottinghilldentalclinic.com/",
+    "postcode": "W2 5AJ",
+    "area": "Kensal Town",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Hyde Park Dental Clinic",
+    "address": "61, Bayswater Road, City of Westminster, W2 3PF",
+    "phone": "+44 20 7706 1112",
+    "link": "https://www.hydeparkdentalclinic.co.uk/",
+    "postcode": "W2 3PF",
+    "area": "Paddington",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Image Dental Clinic",
+    "address": "21, Foley Street, City of Westminster, W1W 7TN",
+    "phone": null,
+    "link": null,
+    "postcode": "W1W 7TN",
+    "area": "Mayfair",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Leicester Square Dental Clinic",
+    "address": "24b, Lisle Street, City of Westminster, WC2H 7BA",
+    "phone": null,
+    "link": null,
+    "postcode": "WC2H 7BA",
+    "area": "Chinatown",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Pall Mall Dental Clinic",
+    "address": "15, Pall Mall, City of Westminster, SW1Y 5LU",
+    "phone": null,
+    "link": "http://www.pallmalldental.co.uk/",
+    "postcode": "SW1Y 5LU",
+    "area": "Victoria",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Lister House Dental Clinic",
+    "address": "11, Wimpole Street, City of Westminster, W1G 9RQ",
+    "phone": null,
+    "link": null,
+    "postcode": "W1G 9RQ",
+    "area": "Marylebone",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Hermes London Dental Clinic",
+    "address": "205, Vauxhall Bridge Road, City of Westminster, SW1V 1ER",
+    "phone": "+44 20 7233 7660",
+    "link": "https://hermeslondondentalclinic.com",
+    "postcode": "SW1V 1ER",
+    "area": "Victoria",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": "Mo-Tu 08:00-17:00; We-Th 08:00-18:00; Fr 09:00-15:00; Sa 08:00-14:00"
+  },
+  {
+    "name": "Favero Dental Clinic",
+    "address": "18, Wimpole Street, City of Westminster, W1G 8GF",
+    "phone": null,
+    "link": null,
+    "postcode": "W1G 8GF",
+    "area": "Marylebone",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "The Baker Street Dental Clinic",
+    "address": "104, Baker Street, City of Westminster, W1U 6TW",
+    "phone": null,
+    "link": "https://www.bakerstreetdental.com/",
+    "postcode": "W1U 6TW",
+    "area": "Marylebone",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Covent Garden Dental Clinic",
+    "address": "48, Chandos Place, City of Westminster, WC2N 4HS",
+    "phone": null,
+    "link": null,
+    "postcode": "WC2N 4HS",
+    "area": "City of Westminster",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Paragon Dental Clinic",
+    "address": "64, Frith Street, City of Westminster, W1D 3JF",
+    "phone": "+44 20 3358 0400",
+    "link": "https://www.paragondentalclinic.co.uk/",
+    "postcode": "W1D 3JF",
+    "area": "City of Westminster",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Sonria Dental Clinic",
+    "address": "25, Devonshire Place, City of London, W1G 6JD",
+    "phone": null,
+    "link": null,
+    "postcode": "W1G 6JD",
+    "area": "Marylebone",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
     "name": "Camden Dental Centre",
     "address": "Camden High Street, Greater London, NW1 0LT",
     "phone": "+44 20 7380 0768",
     "link": null,
     "postcode": "NW1 0LT",
     "area": "Chalk Farm",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Greg Gossayn Dental Surgery",
+    "address": "71, Marchmont Street, Greater London, WC1N 1AP",
+    "phone": null,
+    "link": null,
+    "postcode": "WC1N 1AP",
+    "area": "St Pancras",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Raval Dental Surgery",
+    "address": "86, Cromer Street, Greater London, WC1H 8DG",
+    "phone": null,
+    "link": null,
+    "postcode": "WC1H 8DG",
+    "area": "King's Cross",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Grays Inn Road Dental Surgery",
+    "address": "231, Gray's Inn Road, Greater London, WC1X 8RH",
+    "phone": null,
+    "link": null,
+    "postcode": "WC1X 8RH",
+    "area": "King's Cross",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Kensington Dental Practice",
+    "address": "129-131, Kensington High Street, Greater London, W8 5SF",
+    "phone": null,
+    "link": "https://kensingtondental.co.uk/",
+    "postcode": "W8 5SF",
+    "area": "Kensington",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Kensington Dentist",
+    "address": "4, Wrights Lane, Greater London, W8 5SW",
+    "phone": null,
+    "link": "http://kensington-dentist.com/",
+    "postcode": "W8 5SW",
+    "area": "Kensington",
     "services": [],
     "languages": [
       "English"
@@ -819,12 +1701,12 @@
     "opening_hours": null
   },
   {
-    "name": "Kensington Dental Practice",
-    "address": "129-131, Kensington High Street, Greater London, W8 5SF",
-    "phone": null,
-    "link": "https://kensingtondental.co.uk/",
-    "postcode": "W8 5SF",
-    "area": "Kensington",
+    "name": "Thusand Smiles Dental Clinic",
+    "address": "280, Old Brompton Road, Greater London, SW5 9HR",
+    "phone": "+44 20 8050 0280",
+    "link": null,
+    "postcode": "SW5 9HR",
+    "area": "Earl's Court",
     "services": [],
     "languages": [
       "English"
@@ -840,12 +1722,96 @@
     "opening_hours": null
   },
   {
-    "name": "Kensington Health Clinic",
-    "address": "4, Victoria Grove, Greater London, SW7 4QU",
-    "phone": "+44 20 7589 9990",
-    "link": "https://www.kensingtonhealthclinic.co.uk/",
-    "postcode": "SW7 4QU",
+    "name": "Predent Dental Clinic",
+    "address": "15, Hogarth Place, Greater London, SW5 0QY",
+    "phone": "+44 20 7118 1187",
+    "link": "https://predentdentistkensington.co.uk/",
+    "postcode": "SW5 0QY",
+    "area": "Earl's Court",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Parkdent Dental Clinic",
+    "address": "13, Kensington High Street, Greater London, W8 5NP",
+    "phone": null,
+    "link": null,
+    "postcode": "W8 5NP",
     "area": "South Kensington",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "The Grove Dental Surgery",
+    "address": "351, Ladbroke Grove, Greater London, W10 5NQ",
+    "phone": "+44 20 8969 0656",
+    "link": null,
+    "postcode": "W10 5NQ",
+    "area": "North Kensington",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": "Mo-Fr 09:15-18:15; Sa 10:00-14:00"
+  },
+  {
+    "name": "The Behrens Dental Practice",
+    "address": "21, Thurloe Place, Greater London, SW7 2SL",
+    "phone": "+44 20 7584 8810",
+    "link": "https://behrensdentalpractice.com/",
+    "postcode": "SW7 2SL",
+    "area": "Brompton",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Bryer Wallace Dental Practice",
+    "address": "53, Sloane Street, Greater London, SW1X 9QB",
+    "phone": null,
+    "link": "https://www.bupa.co.uk/dental/dental-care/practices/platinum-bryer-wallace-dental-practice",
+    "postcode": "SW1X 9QB",
+    "area": "Chelsea",
     "services": [],
     "languages": [
       "English"
@@ -966,12 +1932,12 @@
     "opening_hours": null
   },
   {
-    "name": "Islington Smiles",
-    "address": "246, Upper Street, Greater London, N1 1RU",
-    "phone": null,
-    "link": null,
-    "postcode": "N1 1RU",
-    "area": "Highbury",
+    "name": "Norwich Family and Cosmetic Dentistry",
+    "address": "117, Lafayette Street, Norwich, 06360",
+    "phone": "+1 860 887 2231",
+    "link": "https://www.norwichsmiles.com",
+    "postcode": "06360",
+    "area": "Norwichtown",
     "services": [],
     "languages": [
       "English"
@@ -1006,5 +1972,2210 @@
     "parking": false,
     "rating": null,
     "opening_hours": "Mo-Fr 09:00-12:30, 14:00-17:30; Sa 09:00-13:30"
+  },
+  {
+    "name": "Old Street Dental Clinic",
+    "address": "69-85, Old Street, Greater London, EC1V 9HX",
+    "phone": "+44 20 7253 5982;+44 20 7251 2844",
+    "link": "https://www.oldstreetdentalclinic.co.uk/",
+    "postcode": "EC1V 9HX",
+    "area": "Finsbury",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "City Dental Clinic",
+    "address": "35, Chiswell Street, City of London, EC1Y 4SA",
+    "phone": null,
+    "link": null,
+    "postcode": "EC1Y 4SA",
+    "area": "City of London",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "The Triangle Dental Practice",
+    "address": "157, Mare Street, Greater London, E8 3RH",
+    "phone": null,
+    "link": null,
+    "postcode": "E8 3RH",
+    "area": "Hackney",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Hackney Dental Practice",
+    "address": "2, Sylvester Road, Greater London, E8 1EP",
+    "phone": null,
+    "link": null,
+    "postcode": "E8 1EP",
+    "area": "Hackney",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "CitySmile Dental Practice",
+    "address": "37-39, Mare Street, Greater London, E8 4RX",
+    "phone": null,
+    "link": null,
+    "postcode": "E8 4RX",
+    "area": "Hackney",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Smilestone Dental",
+    "address": "Hackney Road, Greater London, E2 8JP",
+    "phone": null,
+    "link": null,
+    "postcode": "E2 8JP",
+    "area": "Bethnal Green",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Bow Dental Practice",
+    "address": "629-631, Roman Road, Greater London, E3 2RN",
+    "phone": null,
+    "link": null,
+    "postcode": "E3 2RN",
+    "area": "Bow",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "29 New Road Dental Practice",
+    "address": "29, New Road, Greater London, E1 2AX",
+    "phone": null,
+    "link": null,
+    "postcode": "E1 2AX",
+    "area": "Whitechapel",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "AP Dental Practice",
+    "address": "238-240, Bethnal Green Road, Greater London, E2 6GR",
+    "phone": null,
+    "link": null,
+    "postcode": "E2 6GR",
+    "area": "Whitechapel",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Eastside Dental Practice",
+    "address": "222, Whitechapel Road, Greater London, E1 1BA",
+    "phone": null,
+    "link": null,
+    "postcode": "E1 1BA",
+    "area": "Whitechapel",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Mile End Dental Practice",
+    "address": "227, Mile End Road, Greater London, E1 4AA",
+    "phone": null,
+    "link": null,
+    "postcode": "E1 4AA",
+    "area": "Stepney",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "E2 Dental Practice",
+    "address": "472a, Bethnal Green Road, Greater London, E2 0AW",
+    "phone": null,
+    "link": null,
+    "postcode": "E2 0AW",
+    "area": "Bethnal Green",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Fresh Springs Dental Practice",
+    "address": "40-42, Toynbee Street, Greater London, E1 7NR",
+    "phone": null,
+    "link": null,
+    "postcode": "E1 7NR",
+    "area": "Whitechapel",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Altmore Dental Practice",
+    "address": "33-37, Amsterdam Road, Greater London, E14 3UU",
+    "phone": null,
+    "link": null,
+    "postcode": "E14 3UU",
+    "area": "Isle of Dogs",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "The Second Floor Dental Practice",
+    "address": "43, Ashfield Street, Greater London, E1 2DP",
+    "phone": null,
+    "link": null,
+    "postcode": "E1 2DP",
+    "area": "Whitechapel",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Bupa Health and Dental Centre",
+    "address": "1, Greater London, E14 5AQ",
+    "phone": null,
+    "link": "https://www.bupa.co.uk/health/health-assessments/our-centres/canary-wharf-crossrail",
+    "postcode": "E14 5AQ",
+    "area": "Greater London",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "NHS Dental Practice",
+    "address": "195, North End Road, Greater London, W14 9LU",
+    "phone": "+44 20 7381 1922",
+    "link": null,
+    "postcode": "W14 9LU",
+    "area": "West Kensington",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Blythe Road Dental Practice",
+    "address": "232, Blythe Road, Greater London, W14 0HJ",
+    "phone": "+44 20 7602 5089",
+    "link": "https://smartteeth.com/",
+    "postcode": "W14 0HJ",
+    "area": "Brook Green",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Goldhawk Dental Practice",
+    "address": "9, Goldhawk Road, Greater London, W12 8QJ",
+    "phone": "+44 20 8749 7427",
+    "link": "https://goldhawkdentalpractice.co.uk/",
+    "postcode": "W12 8QJ",
+    "area": "Shepherd's Bush",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Salisbury House Dental Practice",
+    "address": "204, Hammersmith Road, Greater London, W6 7DP",
+    "phone": "+44 20 8748 6543",
+    "link": "http://www.salisburyhousedental.co.uk/",
+    "postcode": "W6 7DP",
+    "area": "Hammersmith",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "ARK Dental Practice",
+    "address": "3a, Auriol Road, Greater London, W14 0SS",
+    "phone": null,
+    "link": null,
+    "postcode": "W14 0SS",
+    "area": "West Kensington",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Ravenscourt Dental Practice",
+    "address": "5, Ravenscourt Avenue, Greater London, W6 0SL",
+    "phone": "+44 20 8748 4023",
+    "link": "https://rdpholistic.co.uk/",
+    "postcode": "W6 0SL",
+    "area": "Hammersmith",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "New Kings Road Dentist",
+    "address": "New King's Road, Greater London, SW6 4SE",
+    "phone": null,
+    "link": null,
+    "postcode": "SW6 4SE",
+    "area": "Fulham",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Kings Dental Clinic",
+    "address": "36, North End Road, Greater London, W14 0SH",
+    "phone": null,
+    "link": "https://www.kingsdentalclinic.co.uk/",
+    "postcode": "W14 0SH",
+    "area": "West Kensington",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Parsons Green Dental Practice",
+    "address": "New King's Road, Greater London, SW6 4XG",
+    "phone": null,
+    "link": null,
+    "postcode": "SW6 4XG",
+    "area": "Fulham",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Bespoke Dental Fulham",
+    "address": "275, New King's Road, Greater London, SW6 4RF",
+    "phone": null,
+    "link": null,
+    "postcode": "SW6 4RF",
+    "area": "Fulham",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Fulham Dental Centre",
+    "address": "North End Road, Greater London, SW6 1NP",
+    "phone": null,
+    "link": null,
+    "postcode": "SW6 1NP",
+    "area": "West Kensington",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "The Bush Dental Clinic",
+    "address": "278, Uxbridge Road, Greater London, W12 7JA",
+    "phone": null,
+    "link": "https://www.thebushdentalclinic.co.uk/",
+    "postcode": "W12 7JA",
+    "area": "Shepherd's Bush",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "York Road Dental Practice",
+    "address": "370, Old York Road, Greater London, SW18 1SP",
+    "phone": null,
+    "link": null,
+    "postcode": "SW18 1SP",
+    "area": "Wandsworth",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Together Dental Wandsworth",
+    "address": "742, Garratt Lane, Greater London, SW17 0NN",
+    "phone": null,
+    "link": "https://www.together.dental/wandsworth/",
+    "postcode": "SW17 0NN",
+    "area": "Summerstown",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": "Mo-Fr 09:00-17:30"
+  },
+  {
+    "name": "Century Dental Clinic",
+    "address": "Ravenna Road, Greater London, SW15 6AW",
+    "phone": "+44 20 8788 9999",
+    "link": "https://centurydentalclinic.co.uk/putney",
+    "postcode": "SW15 6AW",
+    "area": "Putney",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Kennington Dental Surgery",
+    "address": "234, Kennington Park Road, Greater London, SE11 4DA",
+    "phone": null,
+    "link": null,
+    "postcode": "SE11 4DA",
+    "area": "Oval",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "London Bridge Dental Practice",
+    "address": "108-110, Tooley Street, Greater London, SE1 2TH",
+    "phone": "+44 20 7407 1920",
+    "link": "https://www.lbdp.co.uk/",
+    "postcode": "SE1 2TH",
+    "area": "The Borough",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Herne Hill Dental Practice",
+    "address": "100, Herne Hill, Greater London, SE24 9LU",
+    "phone": "+44 20 7274 3147",
+    "link": null,
+    "postcode": "SE24 9LU",
+    "area": "Dulwich Village",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Surrey Docks Dental Practice",
+    "address": "Blondin Way, Greater London, SE16 6BD",
+    "phone": null,
+    "link": null,
+    "postcode": "SE16 6BD",
+    "area": "Rotherhithe",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "The Dental Practice",
+    "address": "Camberwell New Road, Greater London, SE5 0TJ",
+    "phone": "+44 20 7582 2562",
+    "link": null,
+    "postcode": "SE5 0TJ",
+    "area": "Camberwell",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Tower Bridge Dental Practice",
+    "address": "25, Tower Bridge Road, Greater London, SE1 4TL",
+    "phone": null,
+    "link": null,
+    "postcode": "SE1 4TL",
+    "area": "Walworth",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "MP Dental Practice",
+    "address": "Jamaica Road, Greater London, SE16 4QF",
+    "phone": null,
+    "link": null,
+    "postcode": "SE16 4QF",
+    "area": "Bermondsey",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Peckham Dental Clinic",
+    "address": "71, Peckham High Street, Greater London, SE15 5RS",
+    "phone": null,
+    "link": null,
+    "postcode": "SE15 5RS",
+    "area": "Peckham",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Dulwich Dental Clinic",
+    "address": "78, Lordship Lane, Greater London, SE22 8EP",
+    "phone": "+44 20 8299 1334",
+    "link": null,
+    "postcode": "SE22 8EP",
+    "area": "East Dulwich",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Amelia Street Dental Clinic",
+    "address": "22, Amelia Street, Greater London, SE17 3BZ",
+    "phone": null,
+    "link": null,
+    "postcode": "SE17 3BZ",
+    "area": "Elephant and Castle",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Eltham Park Dental Practice",
+    "address": "5, Westmount Road, Greater London, SE9 1JB",
+    "phone": null,
+    "link": null,
+    "postcode": "SE9 1JB",
+    "area": "Well Hall",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "The Meridian Dental Practice",
+    "address": "36, Woolwich Road, Greater London, SE10 0JU",
+    "phone": "+44 20 8853 3177",
+    "link": "http://dentistgreenwich.co.uk/",
+    "postcode": "SE10 0JU",
+    "area": "East Greenwich",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": "Mo-Fr 09:00-20:00; Sa 09:00-13:00"
+  },
+  {
+    "name": "Charlton Village Dental Practice",
+    "address": "20, The Village, Greater London, SE7 8UD",
+    "phone": "+44 20 8856 0660",
+    "link": "https://charltonvillagedental.co.uk/",
+    "postcode": "SE7 8UD",
+    "area": "Charlton",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": "Mo,Tu,Th 08:00-19:00; We,Fr 08:00-17:00; Sa,Su 10:00-15:00"
+  },
+  {
+    "name": "Greenwich Dental Practice",
+    "address": "207, Greenwich High Road, Greater London, SE10 8NB",
+    "phone": "+44 20 8858 1055",
+    "link": "https://www.greenwichdental.uk/",
+    "postcode": "SE10 8NB",
+    "area": "Greater London",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": "Mo-Fr 09:00-19:00; Sa-Su 09:00-17:00"
+  },
+  {
+    "name": "Nabil Habashi Dental Practice",
+    "address": "Byland Close, Greater London, SE2 9PQ",
+    "phone": null,
+    "link": null,
+    "postcode": "SE2 9PQ",
+    "area": "Abbey Wood",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Eltham Family Dental Practice",
+    "address": "78, Dunvegan Road, Greater London, SE9 1RZ",
+    "phone": null,
+    "link": null,
+    "postcode": "SE9 1RZ",
+    "area": "Well Hall",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Creek Road Dental Practice",
+    "address": "20, Creek Road, Greater London, SE8 3BN",
+    "phone": null,
+    "link": "http://www.creekroaddentists.co.uk/",
+    "postcode": "SE8 3BN",
+    "area": "Greater London",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Greenwich dental referral practice",
+    "address": "Greenwich High Road, Greater London, SE10 8NB",
+    "phone": null,
+    "link": null,
+    "postcode": "SE10 8NB",
+    "area": "Greater London",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": "\"by appointment\""
+  },
+  {
+    "name": "Jevington Dental Practice",
+    "address": "71, Jevington Way, Greater London, SE12 9NG",
+    "phone": "+44 20 8851 4949",
+    "link": null,
+    "postcode": "SE12 9NG",
+    "area": "Chinbrook",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Greenwich Dental Health",
+    "address": "Thames Street, Greater London, SE10 9FN",
+    "phone": "+44 20 8016 4121",
+    "link": "https://www.greenwichdentalhealth.co.uk/",
+    "postcode": "SE10 9FN",
+    "area": "Greater London",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": "Mo 08:30-18:00; Tu,We 08:30-19:00; Th,Fr 08:30-18:00; Sa 09:30-16:00"
+  },
+  {
+    "name": "Charlton Dental Clinic",
+    "address": "88, Charlton Road, Greater London, SE7 7EZ",
+    "phone": "+44 20 8858 0481",
+    "link": "https://www.colosseumdental.co.uk/practices/charlton-dental-clinic",
+    "postcode": "SE7 7EZ",
+    "area": "Charlton",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Pura Dental Surgery",
+    "address": "431, Ellis Close, Greater London, SE9 3UL",
+    "phone": null,
+    "link": null,
+    "postcode": "SE9 3UL",
+    "area": "New Eltham",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Crofton Park Dental Practice",
+    "address": "18, Brockley Grove, Greater London, SE4 1QX",
+    "phone": null,
+    "link": null,
+    "postcode": "SE4 1QX",
+    "area": "Brockley",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Lewis Grove Dental Practice",
+    "address": "3, Lewis Grove, Greater London, SE13 6BG",
+    "phone": null,
+    "link": null,
+    "postcode": "SE13 6BG",
+    "area": "Ladywell",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Rushey Green Dental Practice",
+    "address": "Honley Road, Greater London, SE6 4AF",
+    "phone": "+44 20 8314 5066",
+    "link": "https://www.rusheygreendentalpractice.co.uk",
+    "postcode": "SE6 4AF",
+    "area": "Ladywell",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Mullally Dental Practice",
+    "address": "7, Montpelier Row, Greater London, SE3 0RL",
+    "phone": "+44 20 8852 0267",
+    "link": "https://mullallydentalpractice.com",
+    "postcode": "SE3 0RL",
+    "area": "Blackheath",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": "Mo-Fr 09:00-12:45,13:45-17:30"
+  },
+  {
+    "name": "Lewisham Dental Practice",
+    "address": "8-12, Lee High Road, Greater London, SE13 5LQ",
+    "phone": "+44 20 8852 3000",
+    "link": "https://www.lewishamdental.co.uk/",
+    "postcode": "SE13 5LQ",
+    "area": "Hither Green",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": "Mo 09:00-20:00; Tu 09:00-17:00; We 09:00-20:00; Th-Sa 09:00-17:00"
+  },
+  {
+    "name": "The Broadway Dental Practice",
+    "address": "23, Catford Broadway, Greater London, SE6 4SN",
+    "phone": "+44 20 8690 3222",
+    "link": null,
+    "postcode": "SE6 4SN",
+    "area": "Ladywell",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Waldron Dental Clinic",
+    "address": "Douglas Way, Greater London, SE8 4BD",
+    "phone": null,
+    "link": null,
+    "postcode": "SE8 4BD",
+    "area": "New Cross",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Wisteria House Dental Practice",
+    "address": "55, Romford Road, Greater London, E15 4LY",
+    "phone": null,
+    "link": "https://www.wisteriadp.co.uk/",
+    "postcode": "E15 4LY",
+    "area": "Stratford",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": "Mo-Fr 09:00-13:00,14:00-17:00; Sa 09:00-13:00"
+  },
+  {
+    "name": "Forest Dental Practice",
+    "address": "76, Upton Lane, Greater London, E7 9PB",
+    "phone": null,
+    "link": null,
+    "postcode": "E7 9PB",
+    "area": "Upton",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Church Road Dental Practice",
+    "address": "Church Road, Greater London, E12 6AQ",
+    "phone": null,
+    "link": null,
+    "postcode": "E12 6AQ",
+    "area": "Manor Park",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Dorset Place Dental Practice",
+    "address": "1, Dorset Place, Greater London, E15 1BZ",
+    "phone": "+44 7960 003839",
+    "link": "https://dorsetplacedentalpractice.co.uk/",
+    "postcode": "E15 1BZ",
+    "area": "Stratford",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Grove Dental Practice",
+    "address": "21, Plashet Grove, Greater London, E6 1AD",
+    "phone": null,
+    "link": null,
+    "postcode": "E6 1AD",
+    "area": "Upton Park",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Vara Dental Practice",
+    "address": "290, High Street North, Greater London, E12 6SA",
+    "phone": null,
+    "link": null,
+    "postcode": "E12 6SA",
+    "area": "Manor Park",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "The Canning Town Dental Practice",
+    "address": "156, Barking Road, Greater London, E16 1EN",
+    "phone": null,
+    "link": "https://www.nhs.uk/services/dentist/the-canning-town-dental-practice/V003159",
+    "postcode": "E16 1EN",
+    "area": "Canning Town",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Green Street Dental Practice",
+    "address": "244, Green Street, Greater London, E7 8LJ",
+    "phone": null,
+    "link": null,
+    "postcode": "E7 8LJ",
+    "area": "Upton Park",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Burges Road Dental Practice",
+    "address": "2, Burges Road, Greater London, E6 2BJ",
+    "phone": null,
+    "link": null,
+    "postcode": "E6 2BJ",
+    "area": "Little Ilford",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Appleby Community Dental Department",
+    "address": "63, Appleby Road, Greater London, E16 1LG",
+    "phone": null,
+    "link": null,
+    "postcode": "E16 1LG",
+    "area": "Canning Town",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Shrewsbury Community Dental Department",
+    "address": "Shrewsbury Road, Greater London, E7 8QU",
+    "phone": null,
+    "link": null,
+    "postcode": "E7 8QU",
+    "area": "Plashet",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Northwick Park Dental Practice",
+    "address": "Ducker Footpath, Greater London, HA1 3UJ",
+    "phone": null,
+    "link": null,
+    "postcode": "HA1 3UJ",
+    "area": "Greater London",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Pearl Dental Practice",
+    "address": "318, Kilburn Lane, Greater London, W9 3DZ",
+    "phone": null,
+    "link": "https://www.nhs.uk/Services/dentists/Overview/DefaultView.aspx?id=21664",
+    "postcode": "W9 3DZ",
+    "area": "Queen's Park",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": "Mo-Tu,Th-Fr 09:00-13:00,14:00-18:00; We 09:00-13:00,14:00-16:00"
+  },
+  {
+    "name": "Bright Dental Practice",
+    "address": "Kenton Gardens, Greater London, HA3 8DE",
+    "phone": "+44 20 8907 7733",
+    "link": "brightdental.co.uk",
+    "postcode": "HA3 8DE",
+    "area": "Kenton",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Number 1 Dental Clinic",
+    "address": "1, Lydford Road, Greater London, NW2 5QY",
+    "phone": null,
+    "link": "http://www.no1dentalclinic.co.uk/",
+    "postcode": "NW2 5QY",
+    "area": "Mapesbury",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Willesden Library Dental Clinic",
+    "address": "97a, High Road, Greater London, NW10 2SL",
+    "phone": "+44 20 8459 6965",
+    "link": "http://wldentalclinic.co.uk",
+    "postcode": "NW10 2SL",
+    "area": "Cricklewood",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": "Mo-Fr 09:00-01:00,14:00-17:30"
+  },
+  {
+    "name": "Craven Park Dental Clinic",
+    "address": "Craven Park, Greater London, NW10 8SY",
+    "phone": null,
+    "link": null,
+    "postcode": "NW10 8SY",
+    "area": "Harlesden",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Monteiro Dental Clinic",
+    "address": "7, Craven Park Road, Greater London, NW10 4AB",
+    "phone": "+44 20 8961 1117",
+    "link": null,
+    "postcode": "NW10 4AB",
+    "area": "Harlesden",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Vivian Avenue Dental Clinic",
+    "address": "80, Vivian Avenue, Greater London, NW4 3AZ",
+    "phone": null,
+    "link": "http://hendondentist.co.uk",
+    "postcode": "NW4 3AZ",
+    "area": "Hendon Central",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Northfield Dental Practice",
+    "address": "177, Northfield Avenue, Greater London, W13 9QT",
+    "phone": null,
+    "link": "https://www.northfielddentalpractice.com",
+    "postcode": "W13 9QT",
+    "area": "Hanwell",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "White House Dental Practice",
+    "address": "South Road, Greater London, UB1 1RB",
+    "phone": null,
+    "link": null,
+    "postcode": "UB1 1RB",
+    "area": "Greater London",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Sudbury Dental Practice",
+    "address": "1550, Greenford Road, Greater London, UB6 0HR",
+    "phone": "+44 20 8422 2002",
+    "link": "http://idhdentistgreenfordsudburyhill.co.uk/",
+    "postcode": "UB6 0HR",
+    "area": "Sudbury",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Petts Hill Dental Practice",
+    "address": "72, Petts Hill, Greater London, UB5 4NN",
+    "phone": null,
+    "link": null,
+    "postcode": "UB5 4NN",
+    "area": "Greater London",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Oldfield Dental Practice",
+    "address": "150, Oldfield Lane South, Greater London, UB6 9JX",
+    "phone": null,
+    "link": null,
+    "postcode": "UB6 9JX",
+    "area": "Greenford",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Hanwell Dental Practice",
+    "address": "51, Uxbridge Road, Greater London, W7 3PX",
+    "phone": null,
+    "link": "https://www.hanwelldentalpractice.co.uk",
+    "postcode": "W7 3PX",
+    "area": "Hanwell",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Ladwa Dental Practice",
+    "address": "Hamilton Road, Greater London, W5 2EQ",
+    "phone": null,
+    "link": null,
+    "postcode": "W5 2EQ",
+    "area": "Greater London",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Chiswick Park Dental Practice",
+    "address": "62, South Parade, Greater London, W4 5LG",
+    "phone": "+44 20 8987 9977",
+    "link": "https://www.chiswickparkdental.co.uk/",
+    "postcode": "W4 5LG",
+    "area": "Greater London",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": "Mo,Fr 08:30-17:30; Tu,We 08:00-20:00; Th 09:00-19:00"
+  },
+  {
+    "name": "Oakwood Dental Practice",
+    "address": "74, Old Oak Common Lane, Greater London, W3 7UD",
+    "phone": "+44 20 8749 3371",
+    "link": "https://www.oakwooddental.co.uk/",
+    "postcode": "W3 7UD",
+    "area": "Greater London",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "The Ealing Dental Practice",
+    "address": "6, Drayton Green Road, Greater London, W13 8RY",
+    "phone": null,
+    "link": null,
+    "postcode": "W13 8RY",
+    "area": "Hanwell",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Acton Town Dental Practice",
+    "address": "Bollo Bridge Road, Greater London, W3 8BB",
+    "phone": null,
+    "link": null,
+    "postcode": "W3 8BB",
+    "area": "Greater London",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Perivale Dental Practice",
+    "address": "Teignmouth Gardens, Greater London, UB6 8BX",
+    "phone": "+44 20 8997 2737",
+    "link": null,
+    "postcode": "UB6 8BX",
+    "area": "Perivale",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Ealing Dental Specialists",
+    "address": "42, The Mall, Greater London, W5 3TJ",
+    "phone": "+44 20 8567 4483",
+    "link": null,
+    "postcode": "W5 3TJ",
+    "area": "Greater London",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "North Ealing Dental Care",
+    "address": "1, Boileau Road, Greater London, W5 3AQ",
+    "phone": "+44 20 8997 2356",
+    "link": "https://www.northealingdentalcare.co.uk/",
+    "postcode": "W5 3AQ",
+    "area": "Park Royal",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": "Mo-Fr 09:30-18:00; Sa 08:30-12:30"
+  },
+  {
+    "name": "Oakleigh House Dental Practice",
+    "address": "567, London Road, Greater London, TW7 4EJ",
+    "phone": "+44 20 8560 4623;+44 20 8560 1759",
+    "link": "https://oakleighhousedental.co.uk/",
+    "postcode": "TW7 4EJ",
+    "area": "Spring Grove",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": "Mo-Fr 08:30-17:00"
+  },
+  {
+    "name": "Bridge Dental Practice",
+    "address": "St. John's Road, Greater London, TW7 6UH",
+    "phone": "+44 20 8560 1544",
+    "link": null,
+    "postcode": "TW7 6UH",
+    "area": "Spring Grove",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Apex Dental Surgery",
+    "address": "Hampton Road West, Greater London, TW13 6BG",
+    "phone": null,
+    "link": null,
+    "postcode": "TW13 6BG",
+    "area": "Hanworth",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Roseneath Dental Practice",
+    "address": "Mount Ararat Road, Greater London, TW10 6PA",
+    "phone": "+44 20 8940 9955",
+    "link": "https://www.roseneath.co.uk/",
+    "postcode": "TW10 6PA",
+    "area": "North Sheen",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Causeway Dental Practice",
+    "address": "The Causeway, Greater London, TW11 0HF",
+    "phone": "+44 20 8943 0805",
+    "link": "http://www.causewaydental.co.uk",
+    "postcode": "TW11 0HF",
+    "area": "Strawberry Hill",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": "Mo-Th 08:30-17:30; Fr 08:30-16:00"
+  },
+  {
+    "name": "Tudor Lodge Dental Practice",
+    "address": "237, Petersham Road, Greater London, TW10 7DA",
+    "phone": "+44 20 8940 4747",
+    "link": null,
+    "postcode": "TW10 7DA",
+    "area": "Petersham",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": "Mo,Tu,Th 09:00-13:00,14:00-17:00; We 09:00-14:00,15:00-19:00; Fr 08:00-12:00,12:30-17:00; Sa 08:00-14:00"
+  },
+  {
+    "name": "Richmond Dental Suite",
+    "address": "29-31, Heath Road, Greater London, TW1 4AW",
+    "phone": null,
+    "link": null,
+    "postcode": "TW1 4AW",
+    "area": "Strawberry Hill",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Richmond Orthodontics",
+    "address": "Sheen Road, Greater London, TW9 1UF",
+    "phone": "+44 20 8940 5106",
+    "link": null,
+    "postcode": "TW9 1UF",
+    "area": "North Sheen",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "Richmond Green Dental Care",
+    "address": "King Street, Greater London, TW9 1ND",
+    "phone": null,
+    "link": null,
+    "postcode": "TW9 1ND",
+    "area": "St Margarets",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "The Park Dental Clinic",
+    "address": "323, Upper Richmond Road West, Greater London, SW14 8QR",
+    "phone": "+44 20 8876 5088",
+    "link": null,
+    "postcode": "SW14 8QR",
+    "area": "East Sheen",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": "Mo-Fr 08:00-17:00; Sa 09:00-13:00"
+  },
+  {
+    "name": "Putney Dental Surgery",
+    "address": "Upper Richmond Road, Greater London, SW15 5QJ",
+    "phone": null,
+    "link": null,
+    "postcode": "SW15 5QJ",
+    "area": "Greater London",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "P. S. Panesar B.D.S Dental Surgery",
+    "address": "St Margarets Road, Greater London, TW1 1RD",
+    "phone": null,
+    "link": null,
+    "postcode": "TW1 1RD",
+    "area": "St Margarets",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
   }
 ]
