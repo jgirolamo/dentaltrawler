@@ -1,32 +1,5 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "dentaltrawler/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    },
-    {
-      "src": "api/log-error.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/log-error",
-      "dest": "/api/log-error.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/dentaltrawler/$1"
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/dentaltrawler/$1"
-    }
-  ]
+  "buildCommand": "cd dentaltrawler && npm install && npm run build",
+  "outputDirectory": "dentaltrawler/dist"
 }
