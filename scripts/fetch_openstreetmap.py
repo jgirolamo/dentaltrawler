@@ -98,7 +98,7 @@ class OpenStreetMapClient:
         name = place.get('name') or place.get('display_name', '').split(',')[0]
         
         # Extract phone from tags
-        tags = place.get('extratags', {})
+        tags = place.get('extratags', {}) or {}
         phone = tags.get('phone') or tags.get('contact:phone')
         
         # Extract website
