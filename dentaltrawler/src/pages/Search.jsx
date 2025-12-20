@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { clinicsData } from '../clinics';
+import { getZone } from '../utils/zoneUtils';
 import './Search.css';
 
 // Debug: Log data on load
@@ -53,7 +54,7 @@ function Search() {
   useEffect(() => {
     // Show all clinics initially (no filters)
     const initialResults = clinicsData.map(clinic => {
-      const match = calculateMatchScore(clinic, null, [], []);
+      const match = calculateMatchScore(clinic, null, [], [], '', '');
       return {
         clinic: clinic,
         match: match,
@@ -69,7 +70,7 @@ function Search() {
   }, []);
 
   // Calculate match score (same logic as backend)
-  function calculateMatchScore(clinic, searchText, selectedServices, selectedLanguages) {
+  function calculateMatchScore(clinic, searchText, selectedServices, selectedLanguages, area = '', postcode = '') {
     let score = 0;
     let maxScore = 100;
     const matchDetails = [];
@@ -137,18 +138,18 @@ function Search() {
     }
 
     // Area filter (10 points)
-    if (areaFilter) {
+    if (area) {
       const clinicArea = (clinic.area || '').toLowerCase();
-      if (clinicArea.includes(areaFilter.toLowerCase())) {
+      if (clinicArea.includes(area.toLowerCase())) {
         score += 10;
         matchDetails.push('Area matches');
       }
     }
 
     // Postcode filter (10 points)
-    if (postcodeFilter) {
+    if (postcode) {
       const clinicPostcode = (clinic.postcode || '').toLowerCase();
-      if (clinicPostcode.includes(postcodeFilter.toLowerCase())) {
+      if (clinicPostcode.includes(postcode.toLowerCase())) {
         score += 10;
         matchDetails.push('Postcode matches');
       }
@@ -249,7 +250,7 @@ function Search() {
         // Score filter
         if (minScore > 0) {
           filtered = filtered.filter(clinic => {
-            const match = calculateMatchScore(clinic, searchText, selectedServices, selectedLanguages);
+            const match = calculateMatchScore(clinic, searchText, selectedServices, selectedLanguages, areaFilter, postcodeFilter);
             return match.score >= minScore;
           });
         }
@@ -264,7 +265,7 @@ function Search() {
 
         // Calculate match scores
         const scoredResults = filtered.map(clinic => {
-          const match = calculateMatchScore(clinic, searchText, selectedServices, selectedLanguages);
+          const match = calculateMatchScore(clinic, searchText, selectedServices, selectedLanguages, areaFilter, postcodeFilter);
           return {
             clinic: clinic,
             match: match,
@@ -393,9 +394,6 @@ function Search() {
           <div className="header-actions">
             <Link to="/dashboard" className="dashboard-link">
               📊 View Dashboard
-            </Link>
-            <Link to="/error-logs" className="error-logs-link" style={{ marginLeft: '1rem', fontSize: '0.9rem', color: '#666' }}>
-              📋 Error Logs
             </Link>
           </div>
         </div>
@@ -625,11 +623,18 @@ function Search() {
                     <div key={index} className="clinic-card">
                       <div className="clinic-header">
                         <h3>{clinic.name || 'Unknown Clinic'}</h3>
-                        {match.score > 0 && (
-                          <span className={`match-score ${getScoreClass(match.score)}`}>
-                            {match.score}% match
-                          </span>
-                        )}
+                        <div className="clinic-header-badges">
+                          {getZone(clinic) && (
+                            <span className={`zone-badge zone-${getZone(clinic)}`}>
+                              Zone {getZone(clinic)}
+                            </span>
+                          )}
+                          {match.score > 0 && (
+                            <span className={`match-score ${getScoreClass(match.score)}`}>
+                              {match.score}% match
+                            </span>
+                          )}
+                        </div>
                       </div>
                       
                       <div className="clinic-info">
@@ -760,6 +765,12 @@ function Search() {
           )}
         </div>
       </div>
+      <Link to="/error-logs" className="error-logs-link-fixed" title="Error Logs">
+        📋
+      </Link>
+      <Link to="/all-clinics" className="all-clinics-link-fixed" title="All Clinics">
+        🦷
+      </Link>
     </div>
   );
 }

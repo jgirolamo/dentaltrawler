@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import errorLogger from '../utils/errorLogger';
 import './ErrorLogs.css';
 
@@ -110,6 +111,12 @@ function ErrorLogs() {
           ))
         )}
       </div>
+      <Link to="/error-logs" className="error-logs-link-fixed" title="Error Logs">
+        📋
+      </Link>
+      <Link to="/all-clinics" className="all-clinics-link-fixed" title="All Clinics">
+        🦷
+      </Link>
     </div>
   );
 }

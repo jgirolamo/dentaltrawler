@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, ArcElement, Title, Tooltip, Legend } from 'chart.js';
 import { Bar, Doughnut } from 'react-chartjs-2';
 import { clinicsData } from '../clinics';
+import { getZone } from '../utils/zoneUtils';
 import './Dashboard.css';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, ArcElement, Title, Tooltip, Legend);
@@ -160,7 +161,14 @@ function Dashboard() {
         <div className="clinics-container">
           {clinicsData.map((clinic, index) => (
             <div key={index} className="clinic-card">
-              <div className="clinic-name">{clinic.name || 'Unknown Clinic'}</div>
+              <div className="clinic-name-header">
+                <div className="clinic-name">{clinic.name || 'Unknown Clinic'}</div>
+                {getZone(clinic) && (
+                  <span className={`zone-badge zone-${getZone(clinic)}`}>
+                    Zone {getZone(clinic)}
+                  </span>
+                )}
+              </div>
               {clinic.address && (
                 <div className="clinic-info">
                   <svg viewBox="0 0 24 24">
@@ -217,6 +225,12 @@ function Dashboard() {
           ))}
         </div>
       </div>
+      <Link to="/error-logs" className="error-logs-link-fixed" title="Error Logs">
+        📋
+      </Link>
+      <Link to="/all-clinics" className="all-clinics-link-fixed" title="All Clinics">
+        🦷
+      </Link>
     </div>
   );
 }

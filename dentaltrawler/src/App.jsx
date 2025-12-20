@@ -3,6 +3,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 import Search from './pages/Search';
 import Dashboard from './pages/Dashboard';
 import ErrorLogs from './pages/ErrorLogs';
+import AllClinics from './pages/AllClinics';
 import './App.css';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Search />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/error-logs" element={<ErrorLogs />} />
+          <Route path="/all-clinics" element={<AllClinics />} />
         </Routes>
       </BrowserRouter>
     </ErrorBoundary>
