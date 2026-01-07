@@ -1,9 +1,4 @@
-// London dental clinic data - Auto-generated
-// Total clinics: 1324
-// With phone: 458, With website: 532
-// Source: OpenStreetMap + Various
-
-export const clinicsData = [
+[
   {
     "name": "Zental Dental Cricklewood",
     "address": "55, Cricklewood Broadway, London, NW2 3JX",
@@ -31803,4 +31798,4 @@ export const clinicsData = [
     "rating": null,
     "opening_hours": null
   }
-];
+]

@@ -4177,5 +4177,89 @@
     "parking": false,
     "rating": null,
     "opening_hours": null
+  },
+  {
+    "name": "Glow Dentist",
+    "address": "87, Northcote Road, Greater London, SW11 6PW",
+    "phone": null,
+    "link": "https://www.glowdental.co.uk/",
+    "postcode": "SW11 6PW",
+    "area": "Clapham Junction",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "The Finchley Dentist",
+    "address": "26, Southern Road, Greater London, N2 9JG",
+    "phone": "+44 20 3488 0335",
+    "link": "https://www.thefinchleydentist.com/",
+    "postcode": "N2 9JG",
+    "area": "Muswell Hill",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "John Lott Dentist",
+    "address": "735, Wonderland Road North, London, N6H 4L1",
+    "phone": "+1-519-657-6767",
+    "link": "http://www.thetoothteam.com",
+    "postcode": "N6H 4L1",
+    "area": "London",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": null
+  },
+  {
+    "name": "LightHouse Dental London",
+    "address": "1850, Adelaide Street North, London, N5X 4B7",
+    "phone": "+1-519-964-8888",
+    "link": "https://london.lighthousedental.ca/",
+    "postcode": "N5X 4B7",
+    "area": "London",
+    "services": [],
+    "languages": [
+      "English"
+    ],
+    "source": "OpenStreetMap (Free)",
+    "private": true,
+    "nhs": false,
+    "emergency": false,
+    "children": false,
+    "wheelchair_access": false,
+    "parking": false,
+    "rating": null,
+    "opening_hours": "Mo-Su 09:00-20:00"
   }
 ]
